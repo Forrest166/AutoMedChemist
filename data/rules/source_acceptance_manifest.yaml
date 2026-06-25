@@ -1,0 +1,49 @@
+version: source-acceptance-2026-05
+description: Explicitly reviewed data-foundation drift acceptances for large local data refreshes.
+accepted_changes:
+  - acceptance_id: ACCEPT-RING-ERTL-CHUNK-202605
+    check: unexpected_count_jump
+    table: ring_system
+    source_name: Ertl 4M ring-system import
+    max_accepted_jump_fraction: 1.0
+    expires_at: "2026-06-30"
+    reason: Reviewed DB-only Ertl chunk expansion; count jumps are expected while the importer is still filling the ring-system warehouse.
+  - acceptance_id: ACCEPT-RGROUP-NORMALIZATION-202605
+    check: unexpected_count_jump
+    table: rgroup_replacement_normalized
+    source_name: R-group normalization and public MMP expansion
+    max_accepted_jump_fraction: 1.0
+    expires_at: "2026-06-30"
+    reason: Reviewed normalization/source-expansion release; large normalized-pair growth is expected during this data-foundation phase.
+  - acceptance_id: ACCEPT-RGROUP-RAW-EXPANSION-202605
+    check: unexpected_count_jump
+    table: rgroup_replacement
+    source_name: R-group source expansion
+    max_accepted_jump_fraction: 1.0
+    expires_at: "2026-06-30"
+    reason: Reviewed raw R-group source expansion from Bajorath seed plus public MMP-derived directional replacement rows.
+  - acceptance_id: ACCEPT-RGROUP-MINED-FEED-CHECKSUM-202605
+    check: checksum_change
+    asset_id: rgroup_mined_replacement_feed
+    source_name: Governed mined R-group feed
+    expires_at: "2026-06-30"
+    reason: Reviewed CSV feed updates are expected during literature, analog-series, and patent-mined R-group source expansion.
+  - acceptance_id: ACCEPT-EVIDENCE-RESIDUAL-CHART-CHECKSUM-202605
+    check: checksum_change
+    asset_id: evidence_residual_trend_chart
+    source_name: Evidence residual trend chart
+    expires_at: "2026-06-30"
+    reason: Daily residual trend rows are expected to change as new confidence reports and project outcomes are digested.
+  - acceptance_id: ACCEPT-ENDPOINT-FAMILY-RESIDUAL-MODEL-CHECKSUM-202605
+    check: checksum_change
+    asset_id: endpoint_family_residual_model
+    source_name: Endpoint-family residual model
+    expires_at: "2026-06-30"
+    reason: Endpoint-family residual model rows are expected to change as evidence confidence reports and project outcomes are refreshed.
+  - acceptance_id: ACCEPT-PROJECT-FEEDBACK-SEED-202605
+    check: unexpected_count_jump
+    table: project_feedback
+    source_name: Demo historical feedback seed
+    max_accepted_jump_fraction: 1.0
+    expires_at: "2026-06-30"
+    reason: Reviewed demo feedback seeding used for calibration, strategy learning, and closed-loop smoke coverage.

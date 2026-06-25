@@ -1,0 +1,74 @@
+version: target-context-profiles-0.1
+profiles:
+  - profile_id: balanced_project_context
+    endpoint_group: all
+    target_family: all
+    assay_type: all
+    score_weights:
+      potency: 0.42
+      metabolic_stability: 0.20
+      permeability: 0.20
+      liability: 0.18
+    adjustment_scale: 0.12
+    max_adjustment: 6.0
+    constraints:
+      max_tpsa: 115
+      max_mw: 550
+      max_hbd: 3
+      max_hba: 10
+      max_rotatable_bonds: 9
+      max_abs_residual_for_clean_boost: 0.25
+  - profile_id: potency_kinase_cellular
+    endpoint_group: potency
+    target_family: kinase
+    assay_type: IC50
+    score_weights:
+      potency: 0.52
+      metabolic_stability: 0.16
+      permeability: 0.18
+      liability: 0.14
+    adjustment_scale: 0.12
+    max_adjustment: 6.0
+    constraints:
+      max_tpsa: 105
+      max_mw: 520
+      max_hbd: 3
+      max_hba: 9
+      max_rotatable_bonds: 8
+      max_abs_residual_for_clean_boost: 0.22
+  - profile_id: adme_stability_rescue
+    endpoint_group: metabolic_stability
+    target_family: all
+    assay_type: all
+    score_weights:
+      potency: 0.28
+      metabolic_stability: 0.38
+      permeability: 0.18
+      liability: 0.16
+    adjustment_scale: 0.13
+    max_adjustment: 6.0
+    constraints:
+      max_tpsa: 115
+      max_mw: 540
+      max_hbd: 3
+      max_hba: 10
+      max_rotatable_bonds: 9
+      max_abs_residual_for_clean_boost: 0.25
+  - profile_id: permeability_sensitive_series
+    endpoint_group: permeability
+    target_family: all
+    assay_type: all
+    score_weights:
+      potency: 0.30
+      metabolic_stability: 0.18
+      permeability: 0.36
+      liability: 0.16
+    adjustment_scale: 0.13
+    max_adjustment: 6.0
+    constraints:
+      max_tpsa: 90
+      max_mw: 500
+      max_hbd: 2
+      max_hba: 8
+      max_rotatable_bonds: 8
+      max_abs_residual_for_clean_boost: 0.22

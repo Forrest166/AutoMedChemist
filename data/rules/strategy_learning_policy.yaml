@@ -1,0 +1,109 @@
+policy_version: strategy-learning-policy-2026-05
+strategy_version: strategy-learning-v0.2
+default_window_days: 365
+description: Endpoint-specific policy for converting closed-loop decision outcomes into candidate strategy priors.
+recommendation_prior_scores:
+  promote_strategy: 88.0
+  watch_strategy: 68.0
+  collect_outcomes: 55.0
+  deprioritize_strategy: 35.0
+default:
+  policy_id: default
+  min_observed_for_rate: 3
+  promote_hit_rate: 0.6
+  deprioritize_hit_rate: 0.35
+  hit_rate_score_span: 20.0
+  prior_score_bounds: [20.0, 95.0]
+  prior_weight_multiplier: 1.0
+  score_adjustments:
+    promote_strategy: 3.0
+    watch_strategy: 0.5
+    collect_outcomes: 0.0
+    deprioritize_strategy: -4.0
+  operator_score_adjustments:
+    substituent_scan: 0.0
+    functional_group_replacement: 0.5
+    rgroup_network_replacement: 0.8
+    ring_network_replacement: 0.8
+    scaffold_replacement: 0.6
+  site_type_score_adjustments:
+    methoxy_position: 0.6
+    ester_region: 0.6
+    basic_amine: 0.4
+    alkyl_terminal: 0.4
+endpoint_policies:
+  potency:
+    policy_id: potency-balanced
+    prior_weight_multiplier: 1.05
+    promote_hit_rate: 0.62
+    deprioritize_hit_rate: 0.32
+    operator_score_adjustments:
+      substituent_scan: 0.6
+      functional_group_replacement: 0.3
+      rgroup_network_replacement: 0.8
+      ring_network_replacement: 0.8
+      scaffold_replacement: 0.5
+  solubility:
+    policy_id: solubility-property-rescue
+    prior_weight_multiplier: 1.15
+    promote_hit_rate: 0.58
+    deprioritize_hit_rate: 0.36
+    score_adjustments:
+      promote_strategy: 4.0
+      watch_strategy: 0.8
+      collect_outcomes: 0.1
+      deprioritize_strategy: -4.5
+    operator_score_adjustments:
+      substituent_scan: 0.8
+      functional_group_replacement: 0.8
+      rgroup_network_replacement: 0.6
+      ring_network_replacement: 0.4
+      scaffold_replacement: 0.5
+  metabolic_stability:
+    policy_id: metabolic-soft-spot-first
+    prior_weight_multiplier: 1.2
+    promote_hit_rate: 0.57
+    deprioritize_hit_rate: 0.38
+    score_adjustments:
+      promote_strategy: 4.5
+      watch_strategy: 1.0
+      collect_outcomes: 0.2
+      deprioritize_strategy: -5.0
+    operator_score_adjustments:
+      substituent_scan: 0.3
+      functional_group_replacement: 1.4
+      rgroup_network_replacement: 0.5
+      ring_network_replacement: 0.6
+      scaffold_replacement: 0.7
+    site_type_score_adjustments:
+      methoxy_position: 1.5
+      ester_region: 1.0
+      alkyl_terminal: 0.8
+  permeability:
+    policy_id: permeability-liability-control
+    prior_weight_multiplier: 1.1
+    promote_hit_rate: 0.6
+    deprioritize_hit_rate: 0.4
+    score_adjustments:
+      promote_strategy: 3.5
+      watch_strategy: 0.6
+      collect_outcomes: 0.0
+      deprioritize_strategy: -5.0
+    operator_score_adjustments:
+      substituent_scan: 0.4
+      functional_group_replacement: 0.6
+      rgroup_network_replacement: 0.8
+      ring_network_replacement: 0.8
+      scaffold_replacement: 0.6
+    site_type_score_adjustments:
+      basic_amine: 1.0
+      ester_region: 0.4
+  lipophilicity:
+    policy_id: lipophilicity-normalization
+    prior_weight_multiplier: 1.05
+    operator_score_adjustments:
+      substituent_scan: 0.6
+      functional_group_replacement: 0.8
+      rgroup_network_replacement: 0.6
+      ring_network_replacement: 0.4
+      scaffold_replacement: 0.5

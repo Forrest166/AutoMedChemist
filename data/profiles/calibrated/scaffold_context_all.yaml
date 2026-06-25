@@ -1,0 +1,12 @@
+profile_id: scaffold_context_calibrated_all
+name: Scaffold Context Calibrated (all projects)
+score_weights:
+  scaffold_context: 0.06
+scaffold_context_calibration:
+  enabled: true
+  score_offset: 0.0
+  flag_penalties: {}
+  min_score: 0
+  max_score: 100
+  basis: Insufficient positive/negative scaffold feedback; keep default scaffold-context
+    behavior.

@@ -1,0 +1,58 @@
+calibration_cases:
+- case_id: SCC0001
+  scaffold_rule_id: SCR0011
+  context: phenyl-to-pyridyl polarity scan
+  parent_context: para-substituted phenyl
+  expected_outcome: positive
+  observed_outcome: supported
+  evidence_note: Heteroaryl scan is a common first-pass polarity/electronics move.
+- case_id: SCC0002
+  scaffold_rule_id: SCR0011
+  context: basic nitrogen proximal to donor
+  parent_context: donor-rich analog
+  expected_outcome: negative
+  observed_outcome: mixed
+  evidence_note: Watch pKa and H-bond topology shifts before broad promotion.
+- case_id: SCC0003
+  scaffold_rule_id: SCR0012
+  context: terminal cyclohexyl tail contraction
+  parent_context: lipophilic terminal ring
+  expected_outcome: positive
+  observed_outcome: supported
+  evidence_note: Ring contraction can reduce size and lipophilicity while preserving
+    hydrophobic occupancy.
+- case_id: SCC0004
+  scaffold_rule_id: SCR0012
+  context: fused or constrained ring
+  parent_context: annulated cyclohexyl scaffold
+  expected_outcome: negative
+  observed_outcome: fail
+  evidence_note: Avoid size edits when the ring is fused or drives key geometry.
+- case_id: SCC0005
+  scaffold_rule_id: SCR0013
+  context: underfilled terminal hydrophobe
+  parent_context: terminal cyclopentyl tail
+  expected_outcome: positive
+  observed_outcome: supported
+  evidence_note: Ring expansion is useful when pocket occupancy is underfilled.
+- case_id: SCC0006
+  scaffold_rule_id: SCR0009
+  context: two-attachment ring contraction
+  parent_context: flexible linker replacement
+  expected_outcome: negative
+  observed_outcome: mixed
+  evidence_note: Two-attachment ring edits need geometry checks before prioritization.
+- case_id: SCC-AUTO-7014835565
+  scaffold_rule_id: SCR0003
+  context: Phenyl to pyridyl ring nitrogen scan
+  parent_context: aromatic_CH
+  expected_outcome: positive
+  observed_outcome: supported
+  evidence_note: Auto-accepted top promotion candidate for calibration sync; confirm
+    in medchem review before broad rule promotion.
+  source: scaffold_review_workspace
+  candidate_id: S0001
+  run_id: RUN-DEMO-LEARNING-POTENCY
+  reviewed_by: codex_phase_next
+  reviewed_at: '2026-05-16T12:08:39.903472+00:00'
+  rule_version: scaffold-rule-reviews-0.1

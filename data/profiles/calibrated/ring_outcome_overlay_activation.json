@@ -1,0 +1,19 @@
+{
+  "active_context_count": 0,
+  "active_nonzero_context_count": 0,
+  "blockers": [
+    "no_active_nonzero_context"
+  ],
+  "created_at": "2026-06-05T14:40:43.653519+00:00",
+  "max_abs_rank_delta_limit": 50,
+  "max_abs_score_delta_limit": 5.0,
+  "overlay_context_count": 9,
+  "recommended_next_actions": [
+    "Import real completed ring outcome results before expecting nonzero active contexts.",
+    "Approve only contexts with replay rows and acceptable score/rank movement.",
+    "Rebuild candidate queues after activation so active ring outcome adjustments are persisted."
+  ],
+  "replay_status": "no_active_overlay",
+  "rows": [],
+  "status": "blocked_no_active_nonzero_context"
+}

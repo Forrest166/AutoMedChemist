@@ -1,0 +1,3 @@
+context_id,review_decision,reviewer,reviewed_at,approved_score_adjustment,review_note,replay_status,replay_candidate_count,max_abs_proposed_score_delta,max_abs_proposed_rank_delta,gate_status,gate_reasons,endpoint,learning_action,observed_count,policy_min_observed
+RINGCTX-95FE97B6F794,pending_review,,,-3.8,,no_active_overlay,0,0.0,0,blocked,below_min_observed;downweight_ci_high_above_threshold;missing_approved_review,permeability,downweight_context,2,4
+RINGCTX-174934A7F871,pending_review,,,,,no_active_overlay,0,0.0,0,blocked,below_min_observed;not_actionable_learning_action;missing_approved_review,unspecified,insufficient_outcomes,,3

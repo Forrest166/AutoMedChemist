@@ -1,0 +1,19 @@
+profile_id: cns
+name: CNS cautious
+description: CNS-like profile with stronger penalties for polarity, risk, and practical feasibility.
+score_weights:
+  direction: 0.28
+  property: 0.30
+  similarity: 0.14
+  synthetic: 0.08
+  risk: 0.12
+  transform_prior: 0.02
+  evidence_consistency: 0.05
+  vendor: 0.03
+  route: 0.03
+evidence_penalties:
+  multiplier: 1.15
+filters:
+  include_advanced: false
+  include_risky: false
+  max_fragment_mw: 130

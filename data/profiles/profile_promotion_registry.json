@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-05-17T03:25:23.575083+00:00",
+  "record_count": 1,
+  "records": [
+    {
+      "artifact_id": "evidence_weighted_residual_adjusted",
+      "artifact_path": "D:\\AutoMedChemist\\data\\profiles\\evidence_weighted_residual_adjusted.yaml",
+      "artifact_sha256": "6714e08e3f44eb9dfe275c2bd8090b2c3f229ae88774d19f271a485ab18b9d31",
+      "artifact_summary": {
+        "endpoint_family_residual_adjustments": {
+          "applied_count": 3,
+          "enabled": true,
+          "review_required": true,
+          "source_model_created_at": "2026-05-17T00:44:34.217472+00:00",
+          "version": "endpoint-family-residual-adjustments-0.1"
+        },
+        "name": "Evidence weighted + residual adjusted",
+        "parent_profile_id": "evidence_weighted",
+        "score_weights": {
+          "direction": 0.28,
+          "evidence_consistency": 0.04,
+          "mmp_precedent": 0.05,
+          "property": 0.2,
+          "ring_frequency": 0.03,
+          "risk": 0.08,
+          "route": 0.02,
+          "sar_neighborhood": 0.03,
+          "scaffold_context": 0.05,
+          "scaffold_local_evidence": 0.03,
+          "similarity": 0.1,
+          "synthetic": 0.08,
+          "transform_activity": 0.06,
+          "transform_prior": 0.05,
+          "vendor": 0.03
+        }
+      },
+      "artifact_type": "scoring_profile",
+      "created_at": "2026-05-17T03:25:23.571357+00:00",
+      "evidence_gap_count": 2,
+      "evidence_pack_outcome_count": 288,
+      "evidence_pack_status": "ready",
+      "gate_block_count": 0,
+      "gate_review_count": 2,
+      "gate_status": "review_required",
+      "iteration_base": "ITER-demo_learning-20260516T213453Z",
+      "iteration_changed_asset_count": 13,
+      "iteration_head": "ITER-demo_learning-20260516T231355Z",
+      "note": "Activated after residual demo import passed, open residual plans closed, and medium-confidence scaffold drafts were applied; low-confidence draft deferred.",
+      "project_name": "demo_learning",
+      "promotion_id": "PPROM-F8C68793BBFE",
+      "promotion_status": "active",
+      "release_smoke_status": "warn",
+      "reviewer": "codex",
+      "status_history": [
+        {
+          "created_at": "2026-05-17T03:25:23.571357+00:00",
+          "note": "Review residual-adjusted evidence-weighted profile against promotion gate before activation.",
+          "reviewer": "codex",
+          "status": "review_requested"
+        },
+        {
+          "created_at": "2026-05-17T15:23:14.952359+00:00",
+          "note": "Activated after residual demo import passed, open residual plans closed, and medium-confidence scaffold drafts were applied; low-confidence draft deferred.",
+          "reviewer": "codex",
+          "status": "active"
+        }
+      ],
+      "updated_at": "2026-05-17T15:23:14.952359+00:00"
+    }
+  ],
+  "status_counts": {
+    "active": 1
+  },
+  "updated_at": "2026-05-17T15:23:14.952359+00:00",
+  "version": "profile-promotion-registry-0.1"
+}

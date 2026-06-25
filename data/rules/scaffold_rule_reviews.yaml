@@ -1,0 +1,25 @@
+version: scaffold-rule-reviews-0.1
+description: Human review overlays for scaffold/ring/linker replacement rules.
+reviews:
+- scaffold_rule_id: SCR0011
+  status: tuned
+  reviewed_by: codex
+  owner: medchem
+  resolution_status: accepted
+  rule_version: scaffold-rule-reviews-0.1
+  reviewed_at: '2026-05-17T15:22:10.859926+00:00'
+  score_adjustment: 8.0
+  note: Draft generated from scaffold calibration audit; apply only through manual
+    scaffold rule review.
+  event_id: SCREV-E8AFBFFA537E
+- scaffold_rule_id: SCR0012
+  status: tuned
+  reviewed_by: codex
+  owner: medchem
+  resolution_status: accepted
+  rule_version: scaffold-rule-reviews-0.1
+  reviewed_at: '2026-05-17T15:22:10.885623+00:00'
+  score_adjustment: 8.0
+  note: Draft generated from scaffold calibration audit; apply only through manual
+    scaffold rule review.
+  event_id: SCREV-C5B0AC2BE8E0

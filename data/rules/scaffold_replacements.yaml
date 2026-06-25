@@ -1,0 +1,145 @@
+version: scaffold-replacements-0.1
+description: Bootstrap two-attachment ring/scaffold replacement rules for the ring+substituent mode.
+scaffold_replacements:
+  - scaffold_rule_id: SCR0001
+    name: Phenyl para-like to bicyclo[1.1.1]pentane
+    from_smarts: "c1ccccc1"
+    to_smiles: "[*:1]C12CC([*:2])(C1)C2"
+    attachment_count: 2
+    replacement_class: saturated_benzene_bioisostere
+    direction_tags: [increase_3d_character, reduce_aromaticity, improve_metabolic_stability]
+    risk: {risk_tags: [geometry_context_dependent], default_enabled: true}
+    source_name: scaffold_seed_from_benzene_bioisostere_literature
+    source_reference: https://www.nature.com/articles/s41570-024-00623-0
+
+  - scaffold_rule_id: SCR0002
+    name: Phenyl para-like to cubane
+    from_smarts: "c1ccccc1"
+    to_smiles: "[*:1]C12C3C4C1C5C2C3C45[*:2]"
+    attachment_count: 2
+    replacement_class: saturated_benzene_bioisostere
+    direction_tags: [increase_3d_character, reduce_aromaticity]
+    risk: {risk_tags: [advanced_only, geometry_context_dependent], default_enabled: true}
+    source_name: scaffold_seed_from_benzene_bioisostere_literature
+    source_reference: https://www.nature.com/articles/s41570-024-00623-0
+
+  - scaffold_rule_id: SCR0003
+    name: Phenyl to pyridyl ring nitrogen scan
+    from_smarts: "c1ccccc1"
+    to_smiles: "[*:1]c1ccncc1[*:2]"
+    attachment_count: 2
+    replacement_class: heteroaryl_bioisostere
+    direction_tags: [heteroaryl_scan, increase_polarity, reduce_lipophilicity]
+    risk: {risk_tags: [pka_context_dependent], default_enabled: true}
+    source_name: scaffold_seed_from_ring_replacement_literature
+    source_reference: https://peter-ertl.com/molecular/data/
+
+  - scaffold_rule_id: SCR0004
+    name: Piperidine to morpholine
+    from_smarts: "C1CCNCC1"
+    to_smiles: "[*:1]C1COCCN1[*:2]"
+    attachment_count: 2
+    replacement_class: saturated_heterocycle_replacement
+    direction_tags: [increase_polarity, reduce_basicity, improve_solubility]
+    risk: {risk_tags: [pka_context_dependent], default_enabled: true}
+    source_name: scaffold_seed_from_ring_replacement_literature
+    source_reference: https://peter-ertl.com/molecular/data/
+
+  - scaffold_rule_id: SCR0005
+    name: Cyclohexyl to oxane
+    from_smarts: "C1CCCCC1"
+    to_smiles: "[*:1]C1CCOCC1[*:2]"
+    attachment_count: 2
+    replacement_class: saturated_heterocycle_replacement
+    direction_tags: [increase_polarity, improve_solubility]
+    risk: {risk_tags: [], default_enabled: true}
+    source_name: scaffold_seed_from_drug_ring_benchmark
+    source_reference: https://doi.org/10.5281/zenodo.6556752
+
+  - scaffold_rule_id: SCR0011
+    name: One-point phenyl to pyridyl scan
+    from_smarts: "c1ccccc1"
+    to_smiles: "[*:1]c1ccncc1"
+    attachment_count: 1
+    replacement_class: heteroaryl_bioisostere
+    direction_tags: [heteroaryl_scan, increase_polarity, reduce_lipophilicity]
+    risk: {risk_tags: [pka_context_dependent], default_enabled: true}
+    source_name: scaffold_operator_seed
+    source_reference: localmedchem_scaffold_operator_seed_v0.2
+
+  - scaffold_rule_id: SCR0012
+    name: Cyclohexyl ring contraction to cyclopentyl
+    from_smarts: "C1CCCCC1"
+    to_smiles: "[*:1]C1CCCC1"
+    attachment_count: 1
+    replacement_class: ring_contraction
+    direction_tags: [reduce_size, increase_rigidity, scaffold_size_scan]
+    risk: {risk_tags: [conformation_context_dependent], default_enabled: true}
+    source_name: scaffold_operator_seed
+    source_reference: localmedchem_scaffold_operator_seed_v0.2
+
+  - scaffold_rule_id: SCR0013
+    name: Cyclopentyl ring expansion to cyclohexyl
+    from_smarts: "C1CCCC1"
+    to_smiles: "[*:1]C1CCCCC1"
+    attachment_count: 1
+    replacement_class: ring_expansion
+    direction_tags: [increase_size, hydrophobic_fill, scaffold_size_scan]
+    risk: {risk_tags: [conformation_context_dependent], default_enabled: true}
+    source_name: scaffold_operator_seed
+    source_reference: localmedchem_scaffold_operator_seed_v0.2
+
+  - scaffold_rule_id: SCR0006
+    name: Methylene linker to ether oxygen
+    from_smarts: "[CX4H2]"
+    to_smiles: "[*:1]O[*:2]"
+    attachment_count: 2
+    replacement_class: linker_heteroatom_replacement
+    direction_tags: [linker_replacement, increase_polarity, reduce_lipophilicity]
+    risk: {risk_tags: [linker_context_dependent], default_enabled: true}
+    source_name: scaffold_seed_from_linker_replacement_rules
+    source_reference: internal_linker_rule_seed
+
+  - scaffold_rule_id: SCR0007
+    name: Methylene linker to difluoromethylene
+    from_smarts: "[CX4H2]"
+    to_smiles: "[*:1]C(F)(F)[*:2]"
+    attachment_count: 2
+    replacement_class: linker_metabolism_blocking
+    direction_tags: [linker_replacement, metabolism_blocking, improve_metabolic_stability]
+    risk: {risk_tags: [lipophilicity_context_dependent], default_enabled: true}
+    source_name: scaffold_seed_from_linker_replacement_rules
+    source_reference: internal_linker_rule_seed
+
+  - scaffold_rule_id: SCR0008
+    name: Ether oxygen to methylene linker
+    from_smarts: "[OD2]"
+    to_smiles: "[*:1]C[*:2]"
+    attachment_count: 2
+    replacement_class: linker_polarity_reduction
+    direction_tags: [linker_replacement, reduce_polarity, increase_lipophilicity]
+    risk: {risk_tags: [property_context_dependent], default_enabled: true}
+    source_name: scaffold_seed_from_linker_replacement_rules
+    source_reference: internal_linker_rule_seed
+
+  - scaffold_rule_id: SCR0009
+    name: Cyclohexyl to cyclopentyl contraction
+    from_smarts: "C1CCCCC1"
+    to_smiles: "[*:1]C1CCC([*:2])C1"
+    attachment_count: 2
+    replacement_class: ring_contraction
+    direction_tags: [ring_contraction, reduce_size, increase_rigidity]
+    risk: {risk_tags: [geometry_context_dependent], default_enabled: true}
+    source_name: scaffold_seed_from_ring_size_rules
+    source_reference: internal_ring_size_rule_seed
+
+  - scaffold_rule_id: SCR0010
+    name: Cyclopentyl to cyclohexyl expansion
+    from_smarts: "C1CCCC1"
+    to_smiles: "[*:1]C1CCCC([*:2])C1"
+    attachment_count: 2
+    replacement_class: ring_expansion
+    direction_tags: [ring_expansion, increase_size, adjust_vector_geometry]
+    risk: {risk_tags: [geometry_context_dependent], default_enabled: true}
+    source_name: scaffold_seed_from_ring_size_rules
+    source_reference: internal_ring_size_rule_seed

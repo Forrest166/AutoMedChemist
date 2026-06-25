@@ -1,0 +1,73 @@
+version: transform-mmp-mapping-0.1
+description: Exact variable-fragment mappings from mined ChEMBL MMP evidence to functional transform rules.
+mappings:
+  - rule_id: FGR0009
+    replacement_label: OMe->OH
+    from_smiles: "CO[*:1]"
+    to_smiles: "O[*:1]"
+    match_type: exact_variable_pair
+  - rule_id: FGR0012
+    replacement_label: OMe->F
+    from_smiles: "CO[*:1]"
+    to_smiles: "F[*:1]"
+    match_type: exact_variable_pair
+  - rule_id: FGR0008
+    replacement_label: phenyl->pyridyl
+    from_smiles: "c1ccc([*:1])cc1"
+    to_smiles: "c1ccncc1[*:1]"
+    match_type: exact_variable_pair
+  - rule_id: FGR0001
+    replacement_label: ester->amide
+    from_smiles: "COC(=O)[*:1]"
+    to_smiles: "NC(=O)[*:1]"
+    match_type: exact_variable_pair
+  - rule_id: FGR0005
+    replacement_label: acid->tetrazole
+    from_smiles: "O=C(O)[*:1]"
+    to_smiles: "c1nnn[nH]1[*:1]"
+    match_type: exact_variable_pair
+  - rule_id: FGR0014
+    replacement_label: amine->dealkylated
+    from_smiles: "CN(C)[*:1]"
+    to_smiles: "CN[*:1]"
+    match_type: exact_variable_pair
+  - rule_id: MMPMAP0001
+    replacement_label: chloro->nitro
+    from_smiles: "Cl[*:1]"
+    to_smiles: "O=[N+]([O-])[*:1]"
+    match_type: exact_variable_pair
+  - rule_id: MMPMAP0002
+    replacement_label: aryl_chloro->aryl_H
+    from_smiles: "Clc1ccccc1[*:1]"
+    to_smiles: "c1ccc([*:1])cc1"
+    match_type: exact_variable_pair
+  - rule_id: MMPMAP0003
+    replacement_label: aryl_OMe->aryl_H
+    from_smiles: "COc1ccc([*:1])cc1"
+    to_smiles: "c1ccc([*:1])cc1"
+    match_type: exact_variable_pair
+  - rule_id: MMPMAP0004
+    replacement_label: aryl_OH->aryl_H
+    from_smiles: "Oc1ccc([*:1])cc1"
+    to_smiles: "c1ccc([*:1])cc1"
+    match_type: exact_variable_pair
+  - rule_id: MMPMAP0005
+    replacement_label: Me->CH2OH
+    from_smiles: "C[*:1]"
+    to_smiles: "OC[*:1]"
+    match_type: exact_variable_pair
+  - rule_id: MMPMAP0006
+    replacement_label: Me->COOH
+    from_smiles: "C[*:1]"
+    to_smiles: "O=C(O)[*:1]"
+    match_type: exact_variable_pair
+  - rule_id: MMPMAP0007
+    replacement_label: ethyl_ester->acid
+    from_smiles: "CCOC(=O)[*:1]"
+    to_smiles: "O=C(O)[*:1]"
+    match_type: exact_variable_pair
+  - rule_id: MMPMAP0008
+    replacement_label: ethyl->methyl
+    from_smiles: "CC[*:1]"
+    to_smiles: "C[*:1]"
+    match_type: exact_variable_pair

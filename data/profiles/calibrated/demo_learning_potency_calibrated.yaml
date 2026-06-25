@@ -1,0 +1,67 @@
+profile_id: demo_learning_potency_calibrated
+name: demo_learning potency calibrated
+description: Generated from saved candidate feedback; review before production use.
+score_weights:
+  direction: 0.24893648800402732
+  property: 0.1621151856789605
+  similarity: 0.0898937317792321
+  synthetic: 0.11300499532552598
+  risk: 0.06223412200100683
+  transform_prior: 0.03457451222278158
+  transform_activity: 0.0
+  mmp_precedent: 0.056744242652224684
+  evidence_consistency: 0.020744707333668944
+  evidence_confidence_calibration: 0.010372353666834472
+  sar_neighborhood: 0.050481553806238914
+  ring_frequency: 0.013829804889112628
+  scaffold_context: 0.020744707333668944
+  scaffold_local_evidence: 0.013829804889112628
+  strategy_learning_prior: 0.013829804889112628
+  public_strategy_signal: 0.010372353666834472
+  vendor: 0.07829163186165772
+  route: 0.0
+filters: {}
+calibration:
+  calibration_id: CAL-55A4A0D1A5B3
+  created_at: '2026-06-05T10:15:40.138693+00:00'
+  endpoint_group: potency
+  feedback_count: 48
+  candidate_count: 48
+  property_windows:
+    mw:
+      min: 158.85
+      max: 228.53
+      basis: 14 high-scoring feedback observations
+    clogp:
+      min: 1.08
+      max: 2.55
+      basis: 14 high-scoring feedback observations
+    tpsa:
+      min: 22.92
+      max: 68.69
+      basis: 14 high-scoring feedback observations
+    hbd:
+      min: -0.5
+      max: 2.2
+      basis: 14 high-scoring feedback observations
+    hba:
+      min: 1.5
+      max: 3.5
+      basis: 14 high-scoring feedback observations
+    rotatable_bonds:
+      min: 0.8
+      max: 3.5
+      basis: 14 high-scoring feedback observations
+  endpoint_gate:
+    endpoint_group: potency
+    go_score: 72.0
+    stop_score: 32.0
+    min_evidence_score: 60.0
+    min_risk_score: 55.0
+    hard_min_evidence_score: 45.0
+    low_confidence_threshold: 55.0
+    mean_assay_confidence_score: 95.0
+    retest_event_count: 0
+    event_count: 48
+    learning_basis: observed_thresholds
+    gate_source: assay_learning

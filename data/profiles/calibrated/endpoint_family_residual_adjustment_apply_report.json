@@ -1,0 +1,9 @@
+{
+  "applied_count": 3,
+  "approved_review_count": 3,
+  "profile_id": "evidence_weighted_residual_adjusted",
+  "profile_out": "D:\\AutoMedChemist\\data\\profiles\\evidence_weighted_residual_adjusted.yaml",
+  "review_row_count": 3,
+  "reviews": "D:\\AutoMedChemist\\data\\profiles\\calibrated\\endpoint_family_residual_adjustment_reviews.csv",
+  "status": "applied"
+}

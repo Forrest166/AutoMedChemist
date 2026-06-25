@@ -1,0 +1,19 @@
+profile_id: solubility_rescue
+name: Solubility rescue
+description: Prioritizes polarity, lipophilicity reduction, and medchem-routine polar groups.
+score_weights:
+  direction: 0.38
+  property: 0.22
+  similarity: 0.08
+  synthetic: 0.08
+  risk: 0.08
+  transform_prior: 0.06
+  evidence_consistency: 0.05
+  vendor: 0.04
+  route: 0.06
+evidence_penalties:
+  multiplier: 1.1
+filters:
+  include_advanced: false
+  include_risky: false
+  max_fragment_mw: 200

@@ -1,0 +1,40 @@
+version: ring-outcome-maturation-2026-05
+description: Endpoint-specific maturity gates for ring outcome scoring overlays.
+defaults:
+  min_observed: 3
+  promote_ci_low_threshold: 0.40
+  downweight_ci_high_threshold: 0.55
+  max_abs_adjustment: 4.0
+endpoint_thresholds:
+  potency:
+    min_observed: 5
+    promote_ci_low_threshold: 0.45
+    downweight_ci_high_threshold: 0.55
+  solubility:
+    min_observed: 4
+    promote_ci_low_threshold: 0.40
+    downweight_ci_high_threshold: 0.60
+  permeability:
+    min_observed: 4
+    promote_ci_low_threshold: 0.42
+    downweight_ci_high_threshold: 0.58
+  stability:
+    min_observed: 4
+    promote_ci_low_threshold: 0.42
+    downweight_ci_high_threshold: 0.58
+  clearance:
+    min_observed: 4
+    promote_ci_low_threshold: 0.42
+    downweight_ci_high_threshold: 0.58
+  herg:
+    min_observed: 5
+    promote_ci_low_threshold: 0.48
+    downweight_ci_high_threshold: 0.52
+  toxicity:
+    min_observed: 5
+    promote_ci_low_threshold: 0.48
+    downweight_ci_high_threshold: 0.52
+approval:
+  require_replay_before_approval: true
+  max_abs_rank_delta_without_note: 10
+  max_abs_score_delta_without_note: 4.0

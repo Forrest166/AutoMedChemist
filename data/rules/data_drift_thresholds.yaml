@@ -1,0 +1,44 @@
+version: data-drift-thresholds-0.1
+description: Thresholds used by daily maintenance and data-foundation gates.
+count_thresholds:
+  ring_system:
+    min_count: 75000
+    max_drop_fraction: 0.02
+    max_jump_fraction: 0.50
+  rgroup_replacement:
+    min_count: 1000
+    max_drop_fraction: 0.05
+    max_jump_fraction: 0.30
+  ring_replacement:
+    min_count: 2500
+    max_drop_fraction: 0.05
+    max_jump_fraction: 0.30
+  chembl_activity_evidence:
+    min_count: 600
+    max_drop_fraction: 0.10
+    max_jump_fraction: 0.50
+  transform_activity_summary:
+    min_count: 100
+    max_drop_fraction: 0.10
+    max_jump_fraction: 0.50
+  project_feedback:
+    min_count: 0
+    max_drop_fraction: 0.25
+    max_jump_fraction: 1.00
+asset_checksum_watchlist:
+  - core_substituent_library
+  - ring_replacements
+  - rgroup_replacements
+  - rgroup_mined_replacement_feed
+  - scaffold_replacements
+  - chembl_activity_evidence
+  - mmp_transform_evidence
+  - evidence_residual_trend_chart
+  - endpoint_family_residual_model
+  - scoring_profiles
+alert_policy:
+  missing_previous_snapshot: warning
+  count_below_minimum: warning
+  count_drop: error
+  unexpected_count_jump: warning
+  checksum_change: watch

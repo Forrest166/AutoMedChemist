@@ -1,0 +1,30 @@
+profile_id: balanced_project_context_calibrated_demo_learning
+endpoint_group: all
+target_family: all
+assay_type: all
+score_weights:
+  potency: 0.4347
+  metabolic_stability: 0.1947
+  permeability: 0.1958
+  liability: 0.1748
+adjustment_scale: 0.12
+max_adjustment: 6.0
+constraints:
+  max_tpsa: 115
+  max_mw: 550
+  max_hbd: 3
+  max_hba: 10
+  max_rotatable_bonds: 9
+  max_abs_residual_for_clean_boost: 0.25
+matched_context:
+  endpoint_group: ''
+  target_family: ''
+  assay_type: ''
+  target_family_raw: null
+  assay_type_raw: null
+  endpoint_group_raw: null
+calibration_status: calibrated
+calibration_project_name: demo_learning
+calibration_observation_count: 288
+calibration_basis: historical_candidate_outcomes
+calibrated_at: '2026-06-02T00:51:47.152519+00:00'

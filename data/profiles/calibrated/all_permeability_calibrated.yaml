@@ -1,0 +1,67 @@
+profile_id: all_permeability_calibrated
+name: All projects permeability calibrated
+description: Generated from saved candidate feedback; review before production use.
+score_weights:
+  direction: 0.2765679331480916
+  property: 0.1491552119983707
+  similarity: 0.08813717072630996
+  synthetic: 0.11164620166760952
+  risk: 0.046896025800055
+  transform_prior: 0.033898911817811524
+  transform_activity: 0.0
+  mmp_precedent: 0.06198619419357744
+  evidence_consistency: 0.020339347090686914
+  evidence_confidence_calibration: 0.010169673545343457
+  sar_neighborhood: 0.013559564727124608
+  ring_frequency: 0.013559564727124608
+  scaffold_context: 0.04067869418137383
+  scaffold_local_evidence: 0.013559564727124608
+  strategy_learning_prior: 0.013559564727124608
+  public_strategy_signal: 0.010169673545343457
+  vendor: 0.09611670337692824
+  route: 0.0
+filters: {}
+calibration:
+  calibration_id: CAL-CEDD1B248112
+  created_at: '2026-06-02T00:51:44.420297+00:00'
+  endpoint_group: permeability
+  feedback_count: 24
+  candidate_count: 24
+  property_windows:
+    mw:
+      min: 153.26
+      max: 228.38
+      basis: 7 high-scoring feedback observations
+    clogp:
+      min: 1.24
+      max: 2.63
+      basis: 7 high-scoring feedback observations
+    tpsa:
+      min: 24.46
+      max: 51.94
+      basis: 7 high-scoring feedback observations
+    hbd:
+      min: -0.5
+      max: 1.5
+      basis: 7 high-scoring feedback observations
+    hba:
+      min: 1.5
+      max: 3.5
+      basis: 7 high-scoring feedback observations
+    rotatable_bonds:
+      min: 0.5
+      max: 3.3
+      basis: 7 high-scoring feedback observations
+  endpoint_gate:
+    endpoint_group: permeability
+    go_score: 66.0
+    stop_score: 46.0
+    min_evidence_score: 60.0
+    min_risk_score: 55.0
+    hard_min_evidence_score: 45.0
+    low_confidence_threshold: 55.0
+    mean_assay_confidence_score: 62.5
+    retest_event_count: 104
+    event_count: 160
+    learning_basis: observed_thresholds
+    gate_source: assay_learning

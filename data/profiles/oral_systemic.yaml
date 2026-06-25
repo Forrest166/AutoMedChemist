@@ -1,0 +1,19 @@
+profile_id: oral_systemic
+name: Oral systemic balance
+description: Balanced oral profile with moderate weight on property space and practical synthesis.
+score_weights:
+  direction: 0.32
+  property: 0.24
+  similarity: 0.12
+  synthetic: 0.10
+  risk: 0.10
+  transform_prior: 0.04
+  evidence_consistency: 0.04
+  vendor: 0.04
+  route: 0.04
+evidence_penalties:
+  multiplier: 1.0
+filters:
+  include_advanced: false
+  include_risky: false
+  max_fragment_mw: 180

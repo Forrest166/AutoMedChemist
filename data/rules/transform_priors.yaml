@@ -1,0 +1,227 @@
+version: transform-priors-0.1
+description: >
+  Bootstrap transform priors for functional-group replacement enumeration.
+  Scores combine curated medicinal chemistry precedent, approximate property
+  movement, synthetic familiarity, and activity-cliff risk. Quantitative MMPDB
+  imports can replace or augment these entries in later releases.
+priors:
+  - rule_id: FGR0001
+    replacement_label: ester->amide
+    evidence_level: high
+    mmp_pair_count: 0
+    expected_effects: {hydrolysis: decrease, clogp: decrease, tpsa: increase, hbd: increase}
+    mean_delta_clogp: -0.6
+    mean_delta_tpsa: 17.0
+    activity_cliff_risk: medium
+    synthetic_precedence: high
+    prior_score: 86
+    confidence: 0.72
+
+  - rule_id: FGR0002
+    replacement_label: ester->NMe-amide
+    evidence_level: high
+    mmp_pair_count: 0
+    expected_effects: {hydrolysis: decrease, clogp: decrease, tpsa: increase, hbd: increase}
+    mean_delta_clogp: -0.4
+    mean_delta_tpsa: 17.0
+    activity_cliff_risk: medium
+    synthetic_precedence: high
+    prior_score: 82
+    confidence: 0.68
+
+  - rule_id: FGR0003
+    replacement_label: ester->NMe2-amide
+    evidence_level: medium
+    mmp_pair_count: 0
+    expected_effects: {hydrolysis: decrease, clogp: neutral, tpsa: increase, hbd: decrease}
+    mean_delta_clogp: -0.2
+    mean_delta_tpsa: 14.0
+    activity_cliff_risk: medium
+    synthetic_precedence: high
+    prior_score: 76
+    confidence: 0.62
+
+  - rule_id: FGR0004
+    replacement_label: ester->hydroxamic_acid
+    evidence_level: medium
+    mmp_pair_count: 0
+    expected_effects: {metal_binding: increase, clogp: decrease, tpsa: increase, hbd: increase}
+    mean_delta_clogp: -0.8
+    mean_delta_tpsa: 26.0
+    activity_cliff_risk: high
+    synthetic_precedence: medium
+    prior_score: 58
+    confidence: 0.52
+
+  - rule_id: FGR0005
+    replacement_label: acid->tetrazole
+    evidence_level: high
+    mmp_pair_count: 0
+    expected_effects: {acid_bioisostere: increase, clogp: increase, tpsa: increase, permeability: context_dependent}
+    mean_delta_clogp: 0.4
+    mean_delta_tpsa: 28.0
+    activity_cliff_risk: high
+    synthetic_precedence: medium
+    prior_score: 79
+    confidence: 0.66
+
+  - rule_id: FGR0006
+    replacement_label: acid->acylsulfonamide
+    evidence_level: medium
+    mmp_pair_count: 0
+    expected_effects: {acid_bioisostere: increase, clogp: decrease, tpsa: increase, hbd: increase}
+    mean_delta_clogp: -0.5
+    mean_delta_tpsa: 46.0
+    activity_cliff_risk: high
+    synthetic_precedence: medium
+    prior_score: 66
+    confidence: 0.56
+
+  - rule_id: FGR0007
+    replacement_label: acid->hydroxamic_acid
+    evidence_level: medium
+    mmp_pair_count: 0
+    expected_effects: {metal_binding: increase, clogp: decrease, tpsa: increase, hbd: increase}
+    mean_delta_clogp: -0.7
+    mean_delta_tpsa: 27.0
+    activity_cliff_risk: high
+    synthetic_precedence: medium
+    prior_score: 55
+    confidence: 0.50
+
+  - rule_id: FGR0008
+    replacement_label: phenyl->pyridyl
+    evidence_level: high
+    mmp_pair_count: 0
+    expected_effects: {clogp: decrease, tpsa: increase, hba: increase, electronics: electron_withdrawing}
+    mean_delta_clogp: -0.8
+    mean_delta_tpsa: 12.0
+    activity_cliff_risk: high
+    synthetic_precedence: high
+    prior_score: 78
+    confidence: 0.70
+
+  - rule_id: FGR0009
+    replacement_label: OMe->OH
+    evidence_level: medium
+    mmp_pair_count: 0
+    expected_effects: {clogp: decrease, tpsa: increase, hbd: increase, metabolism: context_dependent}
+    mean_delta_clogp: -0.9
+    mean_delta_tpsa: 11.0
+    activity_cliff_risk: medium
+    synthetic_precedence: high
+    prior_score: 70
+    confidence: 0.60
+
+  - rule_id: FGR0010
+    replacement_label: OMe->OCF3
+    evidence_level: medium
+    mmp_pair_count: 0
+    expected_effects: {metabolism: block, clogp: increase, electronics: electron_withdrawing}
+    mean_delta_clogp: 0.8
+    mean_delta_tpsa: 0.0
+    activity_cliff_risk: medium
+    synthetic_precedence: medium
+    prior_score: 72
+    confidence: 0.58
+
+  - rule_id: FGR0011
+    replacement_label: OMe->OCHF2
+    evidence_level: medium
+    mmp_pair_count: 0
+    expected_effects: {metabolism: block, clogp: neutral, electronics: electron_withdrawing}
+    mean_delta_clogp: 0.3
+    mean_delta_tpsa: 0.0
+    activity_cliff_risk: medium
+    synthetic_precedence: medium
+    prior_score: 74
+    confidence: 0.58
+
+  - rule_id: FGR0012
+    replacement_label: OMe->F
+    evidence_level: high
+    mmp_pair_count: 0
+    expected_effects: {metabolism: block, size: decrease, hba: decrease, electronics: electron_withdrawing}
+    mean_delta_clogp: 0.0
+    mean_delta_tpsa: -9.0
+    activity_cliff_risk: medium
+    synthetic_precedence: high
+    prior_score: 80
+    confidence: 0.68
+
+  - rule_id: FGR0013
+    replacement_label: amine->N-oxide
+    evidence_level: low
+    mmp_pair_count: 0
+    expected_effects: {basicity: decrease, solubility: increase, permeability: decrease}
+    mean_delta_clogp: -1.0
+    mean_delta_tpsa: 17.0
+    activity_cliff_risk: high
+    synthetic_precedence: medium
+    prior_score: 48
+    confidence: 0.42
+
+  - rule_id: FGR0014
+    replacement_label: amine->dealkylated
+    evidence_level: medium
+    mmp_pair_count: 0
+    expected_effects: {basicity: context_dependent, clogp: decrease, steric_bulk: decrease, metabolism: soft_spot_probe}
+    mean_delta_clogp: -0.5
+    mean_delta_tpsa: 10.0
+    activity_cliff_risk: high
+    synthetic_precedence: high
+    prior_score: 64
+    confidence: 0.56
+    evidence_note: Useful for testing whether N-alkyl groups drive clearance or receptor fill.
+
+  - rule_id: FGR0015
+    replacement_label: amine->acetamide
+    evidence_level: medium
+    mmp_pair_count: 0
+    expected_effects: {basicity: decrease, hba: increase, clogp: neutral_or_decrease, permeability: context_dependent}
+    mean_delta_clogp: -0.2
+    mean_delta_tpsa: 12.0
+    activity_cliff_risk: high
+    synthetic_precedence: high
+    prior_score: 68
+    confidence: 0.58
+    evidence_note: Strong basicity-lowering probe when a primary or secondary amine is available.
+
+  - rule_id: FGR0016
+    replacement_label: amine->mesylamide
+    evidence_level: medium
+    mmp_pair_count: 0
+    expected_effects: {basicity: decrease, polarity: increase, permeability: decrease, solubility: context_dependent}
+    mean_delta_clogp: -0.4
+    mean_delta_tpsa: 25.0
+    activity_cliff_risk: high
+    synthetic_precedence: medium
+    prior_score: 62
+    confidence: 0.52
+    evidence_note: Aggressive basicity and polarity shift; best as a liability probe.
+
+  - rule_id: FGR0017
+    replacement_label: ester->oxadiazole_like
+    evidence_level: medium
+    mmp_pair_count: 0
+    expected_effects: {hydrolysis: decrease, hba: increase, hbd: decrease, conformation: more_rigid}
+    mean_delta_clogp: 0.1
+    mean_delta_tpsa: 8.0
+    activity_cliff_risk: high
+    synthetic_precedence: medium
+    prior_score: 72
+    confidence: 0.55
+    evidence_note: Hydrolysis-resistant heteroaryl replacement with vector/regiochemistry review required.
+
+  - rule_id: FGR0018
+    replacement_label: amide->oxadiazole_like
+    evidence_level: medium
+    mmp_pair_count: 0
+    expected_effects: {amide_hbond: removed, hba: retained, conformation: more_rigid, hydrolysis: decrease}
+    mean_delta_clogp: 0.0
+    mean_delta_tpsa: 8.0
+    activity_cliff_risk: high
+    synthetic_precedence: medium
+    prior_score: 70
+    confidence: 0.54
+    evidence_note: Useful when the amide is a liability and its donor geometry is not essential.

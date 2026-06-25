@@ -1,0 +1,19 @@
+version: quality-warning-policy-0.1
+description: Classify known warnings into accepted-watchlist vs must-fix buckets.
+accepted_warnings:
+  - check: connection_site_incompatibility
+    category: rule_backed_site_context
+    rationale: Functional/rule-backed sites intentionally reject generic one-point substituent attachment.
+  - check: activity_value_missing
+    category: non_numeric_public_activity
+    rationale: ChEMBL records without numeric values are retained for provenance but excluded from quantitative scoring.
+must_fix_warnings:
+  - check: unknown_direction_tag
+    category: vocabulary_drift
+  - check: pubchem_metadata
+    category: missing_external_properties
+  - check: review_use_cases
+    category: review_completeness
+  - check: review_avoid_contexts
+    category: review_completeness
+default_warning_status: must_fix

@@ -1,0 +1,14 @@
+property_profiles:
+  oral_like_default:
+    mw_min: 150
+    mw_max: 600
+    clogp_min: -1
+    clogp_max: 6
+    tpsa_min: 0
+    tpsa_max: 140
+    hbd_max: 5
+    hba_max: 12
+    rotb_max: 12
+    formal_charge_min: -1
+    formal_charge_max: 1
+

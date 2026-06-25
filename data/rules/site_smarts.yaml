@@ -1,0 +1,56 @@
+site_types:
+  aromatic_CH:
+    description: Aromatic C-H positions suitable for local substitution scans.
+    smarts: "[cH]"
+    compatible_connection_types:
+      - single_atom_substitution
+      - carbon_attachment
+      - heteroatom_attachment
+      - aryl_attachment
+      - heteroaryl_attachment
+      - ring_attachment
+  aromatic_halide:
+    description: Aromatic halide positions suitable for replacement scans.
+    smarts: "[c][F,Cl,Br,I]"
+    compatible_connection_types:
+      - single_atom_substitution
+      - carbon_attachment
+      - heteroatom_attachment
+      - aryl_attachment
+      - heteroaryl_attachment
+      - ring_attachment
+  methoxy_position:
+    description: Aryl methoxy groups that may be metabolic soft spots.
+    smarts: "[c][O][CH3]"
+    compatible_connection_types:
+      - heteroatom_attachment
+      - functional_group_replacement
+  ester_region:
+    description: Ester groups suitable for local functional-group replacement.
+    smarts: "[CX3](=O)[OX2][#6]"
+    compatible_connection_types:
+      - functional_group_replacement
+  amide_region:
+    description: Amide groups suitable for amide bioisostere replacement.
+    smarts: "[CX3](=O)[NX3]"
+    compatible_connection_types:
+      - functional_group_replacement
+  acid_region:
+    description: Carboxylic acids suitable for acid bioisostere replacement.
+    smarts: "[CX3](=O)[OX2H1,O-]"
+    compatible_connection_types:
+      - functional_group_replacement
+  basic_amine:
+    description: Aliphatic amines for basicity or solubility tuning.
+    smarts: "[NX3;!$(NC=O)]"
+    compatible_connection_types:
+      - functional_group_replacement
+      - tail_attachment
+  alkyl_terminal:
+    description: Terminal aliphatic tail carbon suitable for local tail extension or scan.
+    smarts: "[CX4H1,CX4H2,CX4H3;!R][#6,#7]"
+    compatible_connection_types:
+      - single_atom_substitution
+      - carbon_attachment
+      - heteroatom_attachment
+      - ring_attachment

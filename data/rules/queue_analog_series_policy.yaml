@@ -1,0 +1,166 @@
+policy_id: queue_analog_series_delta_policy
+active_version: series-policy-20260516-003
+created_at: baseline
+updated_at: '2026-05-16T20:18:42.116174+00:00'
+change_log:
+- event_type: created
+  version: heuristic-v1
+  note: Baseline queue analog-series delta policy.
+- event_type: calibrated
+  version: series-policy-20260516-002
+  parent_version: heuristic-v1
+  reviewer: codex
+  created_at: '2026-05-16T17:35:55.576902+00:00'
+  note: Calibrate queue analog-series policy from current closed-loop priority delta.
+- event_type: calibrated
+  version: series-policy-20260516-003
+  parent_version: series-policy-20260516-002
+  reviewer: codex
+  created_at: '2026-05-16T20:18:42.116174+00:00'
+  note: Endpoint and target-family layered calibration refresh
+versions:
+- version: heuristic-v1
+  status: archived
+  created_at: baseline
+  parent_version: null
+  source_report: null
+  calibration_basis: hand_seeded_baseline
+  training_series_count: 0
+  action_base_adjustments:
+    expand_or_measure_series: 4.0
+    measure_representatives: 2.5
+    review_feedback_driven_shift: 1.0
+    watch_series: 0.0
+    deprioritize_series: -6.0
+  feature_weights:
+    mean_priority_delta: 0.5
+    observed_feedback_high: 1.0
+    observed_feedback_low: -1.5
+    residual_medium: 1.0
+    residual_high: 2.0
+  feature_caps:
+    mean_priority_delta_abs: 3.0
+    min_adjustment: -8.0
+    max_adjustment: 6.0
+    observed_feedback_high_threshold: 70.0
+    observed_feedback_low_threshold: 35.0
+    residual_medium_threshold: 0.15
+    residual_high_threshold: 0.3
+  notes: Default policy mirrors the original rule-based score adjustment.
+- version: series-policy-20260516-002
+  status: archived
+  created_at: '2026-05-16T17:35:55.576902+00:00'
+  parent_version: heuristic-v1
+  source_report: demo_learning
+  calibration_basis: priority_delta_feedback
+  training_series_count: 24
+  training_candidate_count: 30
+  action_base_adjustments:
+    expand_or_measure_series: 4.0
+    measure_representatives: 2.5
+    review_feedback_driven_shift: 0.775
+    watch_series: 0.0
+    deprioritize_series: -6.0
+  feature_weights:
+    mean_priority_delta: 0.5
+    observed_feedback_high: 1.0
+    observed_feedback_low: -1.5
+    residual_medium: 1.0
+    residual_high: 2.0
+  feature_caps:
+    mean_priority_delta_abs: 3.0
+    min_adjustment: -8.0
+    max_adjustment: 6.0
+    observed_feedback_high_threshold: 70.0
+    observed_feedback_low_threshold: 35.0
+    residual_medium_threshold: 0.15
+    residual_high_threshold: 0.3
+  action_summaries:
+  - series_delta_action: review_feedback_driven_shift
+    series_count: 3
+    previous_base_adjustment: 1.0
+    learned_target_adjustment: 0.5
+    new_base_adjustment: 0.775
+  - series_delta_action: watch_series
+    series_count: 21
+    previous_base_adjustment: 0.0
+    learned_target_adjustment: 0.0
+    new_base_adjustment: 0.0
+  notes: Calibrate queue analog-series policy from current closed-loop priority delta.
+- version: series-policy-20260516-003
+  status: active
+  created_at: '2026-05-16T20:18:42.116174+00:00'
+  parent_version: series-policy-20260516-002
+  source_report: demo_learning
+  calibration_basis: priority_delta_feedback
+  training_series_count: 24
+  training_candidate_count: 30
+  action_base_adjustments:
+    expand_or_measure_series: 4.0
+    measure_representatives: 2.5
+    review_feedback_driven_shift: 0.55
+    watch_series: 0.0
+    deprioritize_series: -6.0
+  context_action_base_adjustments:
+    permeability|all:
+      review_feedback_driven_shift: 0.775
+      watch_series: 0.0
+    potency|all:
+      review_feedback_driven_shift: 0.1
+  feature_weights:
+    mean_priority_delta: 0.5
+    observed_feedback_high: 1.0
+    observed_feedback_low: -1.5
+    residual_medium: 1.0
+    residual_high: 2.0
+  feature_caps:
+    mean_priority_delta_abs: 3.0
+    min_adjustment: -8.0
+    max_adjustment: 6.0
+    observed_feedback_high_threshold: 70.0
+    observed_feedback_low_threshold: 35.0
+    residual_medium_threshold: 0.15
+    residual_high_threshold: 0.3
+  action_summaries: &id001
+  - series_delta_action: review_feedback_driven_shift
+    series_count: 3
+    previous_base_adjustment: 0.775
+    learned_target_adjustment: 0.275
+    new_base_adjustment: 0.55
+  - series_delta_action: watch_series
+    series_count: 21
+    previous_base_adjustment: 0.0
+    learned_target_adjustment: 0.0
+    new_base_adjustment: 0.0
+  context_summaries: &id002
+  - context_key: permeability|all
+    endpoint_group: permeability
+    target_family: all
+    series_delta_action: review_feedback_driven_shift
+    series_count: 2
+    previous_base_adjustment: 0.775
+    learned_target_adjustment: 0.775
+    new_base_adjustment: 0.775
+  - context_key: permeability|all
+    endpoint_group: permeability
+    target_family: all
+    series_delta_action: watch_series
+    series_count: 21
+    previous_base_adjustment: 0.0
+    learned_target_adjustment: 0.0
+    new_base_adjustment: 0.0
+  - context_key: potency|all
+    endpoint_group: potency
+    target_family: all
+    series_delta_action: review_feedback_driven_shift
+    series_count: 1
+    previous_base_adjustment: 0.775
+    learned_target_adjustment: -0.725
+    new_base_adjustment: 0.1
+  notes: Endpoint and target-family layered calibration refresh
+latest_calibration:
+  version: series-policy-20260516-003
+  series_count: 24
+  candidate_count: 30
+  action_summaries: *id001
+  context_summaries: *id002

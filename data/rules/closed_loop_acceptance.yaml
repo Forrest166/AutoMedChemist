@@ -1,0 +1,10 @@
+version: closed-loop-acceptance-0.1
+criteria:
+  min_first_candidate_count: 1
+  min_second_candidate_count: 1
+  min_feedback_inserted_count: 1
+  min_priority_delta_count: 1
+  min_next_design_queue_count: 1
+  min_queue_analog_series_delta_count: 1
+  min_series_adjusted_candidate_count: 1
+  min_abs_series_adjustment: 0.25

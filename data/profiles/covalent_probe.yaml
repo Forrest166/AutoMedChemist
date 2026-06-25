@@ -1,0 +1,19 @@
+profile_id: covalent_probe
+name: Covalent probe
+description: Explicit advanced profile for covalent probe ideation; use only with project-level review.
+score_weights:
+  direction: 0.42
+  property: 0.12
+  similarity: 0.08
+  synthetic: 0.08
+  risk: 0.14
+  transform_prior: 0.04
+  evidence_consistency: 0.03
+  vendor: 0.03
+  route: 0.09
+evidence_penalties:
+  multiplier: 1.0
+filters:
+  include_advanced: true
+  include_risky: true
+  max_fragment_mw: 220

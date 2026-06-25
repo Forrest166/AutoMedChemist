@@ -1,0 +1,140 @@
+scoring:
+  direction_score_cap: 100
+  component_weights:
+    direction: 0.36
+    property: 0.22
+    similarity: 0.13
+    synthetic: 0.10
+    risk: 0.09
+    transform_prior: 0.05
+    vendor: 0.04
+    route: 0.01
+
+directions:
+  small_scan:
+    include_tags: [small_scan]
+    score_rules:
+      - {when: tag_match, tags: [small_scan], source: direction_tags, points: 35}
+      - {when: delta, property: mw, op: "<=", value: 45, points: 25}
+      - {when: delta, property: tpsa, op: "<=", value: 20, points: 10}
+      - {when: candidate_vs_parent, property: clogp, op: "<=", offset: 0.75, points: 10}
+
+  increase_polarity:
+    include_tags: [increase_polarity, add_hba, add_hbd, reduce_lipophilicity, polar_group, polar_small]
+    score_rules:
+      - {when: tag_match, tags: [increase_polarity, add_hba, add_hbd], source: direction_tags, points: 25}
+      - {when: delta, property: tpsa, op: ">", value: 0, points: 25}
+      - {when: candidate_vs_parent, property: hba, op: ">=", offset: 0, points: 15}
+      - {when: candidate_vs_parent, property: clogp, op: "<=", offset: 0, points: 25}
+      - {when: delta, property: mw, op: "<=", value: 90, points: 10}
+
+  reduce_lipophilicity:
+    include_tags: [reduce_lipophilicity, increase_polarity, add_hba, polar_group, polar_small]
+    score_rules:
+      - {when: tag_match, tags: [reduce_lipophilicity], source: direction_tags, points: 20}
+      - {when: candidate_vs_parent, property: clogp, op: "<", offset: 0, points: 45}
+      - {when: delta, property: tpsa, op: ">=", value: 0, points: 20}
+      - {when: delta, property: mw, op: "<=", value: 80, points: 10}
+
+  improve_solubility:
+    include_tags: [improve_solubility, increase_polarity, solubilizing_group, add_hba, add_hbd, reduce_lipophilicity]
+    score_rules:
+      - {when: tag_match, tags: [improve_solubility, solubilizing_group], points: 25}
+      - {when: candidate_vs_parent, property: clogp, op: "<", offset: 0, points: 25}
+      - {when: delta, property: tpsa, op: ">", value: 0, points: 25}
+      - {when: candidate_property, property: formal_charge, op: ">=", value: -1, points: 5}
+      - {when: candidate_property, property: formal_charge, op: "<=", value: 1, points: 5}
+
+  metabolism_blocking:
+    include_tags: [metabolism_blocking, electronics_scan, fluorinated, small_ring]
+    score_rules:
+      - {when: tag_match, tags: [metabolism_blocking, fluorinated, small_ring], points: 45}
+      - {when: delta, property: mw, op: "<=", value: 80, points: 20}
+      - {when: candidate_vs_parent, property: clogp, op: "<=", offset: 1.0, points: 10}
+
+  electronics_scan:
+    include_tags: [electronics_scan, electron_withdrawing, electron_donating, fluorinated]
+    score_rules:
+      - {when: tag_match, tags: [electronics_scan], source: direction_tags, points: 25}
+      - {when: tag_match, tags: [electron_withdrawing, electron_donating, strong_electron_withdrawing], points: 35}
+      - {when: delta, property: mw, op: "<=", value: 130, points: 10}
+
+  increase_size:
+    include_tags: [increase_size, hydrophobic_fill, aryl_scan, heteroaryl_scan, bulky_group]
+    score_rules:
+      - {when: tag_match, tags: [increase_size, hydrophobic_fill, bulky_group], points: 25}
+      - {when: delta, property: mw, op: ">", value: 0, points: 35}
+      - {when: delta, property: heavy_atom_count, op: ">", value: 0, points: 25}
+      - {when: delta, property: mw, op: "<=", value: 130, points: 15}
+
+  decrease_size:
+    include_tags: [decrease_size, small_scan]
+    score_rules:
+      - {when: tag_match, tags: [decrease_size, small_scan], points: 25}
+      - {when: delta, property: mw, op: "<=", value: 50, points: 25}
+      - {when: candidate_vs_parent, property: mw, op: "<=", offset: 40, points: 25}
+      - {when: candidate_vs_parent, property: clogp, op: "<=", offset: 0.5, points: 25}
+
+  heteroaryl_scan:
+    include_tags: [heteroaryl_scan, heteroaryl, add_hba, reduce_lipophilicity]
+    score_rules:
+      - {when: tag_match, tags: [heteroaryl], source: class, points: 55}
+      - {when: tag_match, tags: [heteroaryl_scan], source: direction_tags, points: 20}
+      - {when: candidate_vs_parent, property: aromatic_ring_count, op: ">=", offset: 0, points: 15}
+
+  improve_metabolic_stability:
+    include_tags: [improve_metabolic_stability, reduce_hydrolysis, metabolism_blocking, amide, acid_bioisostere]
+    score_rules:
+      - {when: tag_match, tags: [improve_metabolic_stability, reduce_hydrolysis, metabolism_blocking], source: direction_tags, points: 35}
+      - {when: tag_match, tags: [amide, acid_bioisostere, fluorinated, small_ring], points: 25}
+      - {when: delta, property: mw, op: "<=", value: 120, points: 15}
+      - {when: candidate_vs_parent, property: clogp, op: "<=", offset: 0.75, points: 15}
+
+  reduce_hydrolysis:
+    include_tags: [reduce_hydrolysis, improve_metabolic_stability, amide, carbamate, acid_bioisostere]
+    score_rules:
+      - {when: tag_match, tags: [reduce_hydrolysis, improve_metabolic_stability], source: direction_tags, points: 40}
+      - {when: tag_match, tags: [amide, tetrazole, acylsulfonamide, oxadiazole], points: 35}
+      - {when: delta, property: mw, op: "<=", value: 120, points: 15}
+
+  amide_bioisostere_scan:
+    include_tags: [amide_bioisostere_scan, amide_bioisostere, ester_bioisostere, oxadiazole, heteroaryl, reduce_hydrolysis, improve_metabolic_stability]
+    score_rules:
+      - {when: tag_match, tags: [amide_bioisostere_scan], source: direction_tags, points: 35}
+      - {when: tag_match, tags: [amide_bioisostere, ester_bioisostere, oxadiazole, heteroaryl], points: 35}
+      - {when: delta, property: mw, op: "<=", value: 140, points: 15}
+      - {when: candidate_vs_parent, property: clogp, op: "<=", offset: 1.0, points: 10}
+
+  reduce_basicity:
+    include_tags: [reduce_basicity, basicity_reduction, amine_oxide, amide, sulfonamide]
+    score_rules:
+      - {when: tag_match, tags: [reduce_basicity, basicity_reduction], points: 40}
+      - {when: tag_match, tags: [amide, sulfonamide, amine_oxide], points: 25}
+      - {when: delta, property: tpsa, op: ">=", value: 0, points: 15}
+      - {when: candidate_vs_parent, property: clogp, op: "<=", offset: 0.5, points: 10}
+
+  increase_rigidity:
+    include_tags: [increase_rigidity, rigid_group, small_ring, cycloalkyl, polar_ring]
+    score_rules:
+      - {when: tag_match, tags: [increase_rigidity, rigid_group, small_ring], points: 45}
+      - {when: delta, property: rotatable_bonds, op: "<=", value: 1, points: 15}
+      - {when: delta, property: mw, op: "<=", value: 120, points: 15}
+
+  acid_bioisostere_scan:
+    include_tags: [acid_bioisostere_scan, acid_bioisostere, tetrazole, acylsulfonamide, oxadiazole]
+    score_rules:
+      - {when: tag_match, tags: [acid_bioisostere_scan], source: direction_tags, points: 35}
+      - {when: tag_match, tags: [acid_bioisostere, tetrazole, acylsulfonamide, oxadiazole], points: 35}
+      - {when: delta, property: mw, op: "<=", value: 140, points: 15}
+
+  metal_binding_scan:
+    include_tags: [metal_binding_scan, chelator, hydroxamate]
+    score_rules:
+      - {when: tag_match, tags: [metal_binding_scan, chelator, hydroxamate], points: 55}
+      - {when: delta, property: tpsa, op: ">", value: 0, points: 15}
+
+  covalent_probe_scan:
+    include_tags: [covalent_probe_scan, covalent_probe, reactive_alert]
+    score_rules:
+      - {when: tag_match, tags: [covalent_probe_scan, covalent_probe], points: 55}
+      - {when: tag_match, tags: [reactive_alert], source: risk_tags, points: 10}

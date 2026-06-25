@@ -1,0 +1,227 @@
+functional_group_replacements:
+  - rule_id: FGR0001
+    name: Ester to primary amide
+    replacement_label: ester->amide
+    strategy: reaction_smarts
+    site_types: [ester_region]
+    reaction_smarts: "[C:1](=O)O[#6]>>[C:1](=O)N"
+    product_smiles: "[*:1]C(=O)N"
+    class: [amide, ester_bioisostere, hydrolysis_block]
+    direction_tags: [reduce_hydrolysis, improve_metabolic_stability, increase_polarity, add_hbd, add_hba]
+    property_tags: {polarity: high, lipophilicity_effect: decrease, metabolic_stability: increase}
+    risk: {risk_tags: [permeability_risk], default_enabled: true, cautions: [may_raise_tpsa]}
+    priority: {mvp: true, common_medchem: true, default_rank: 12}
+
+  - rule_id: FGR0002
+    name: Ester to N-methyl amide
+    replacement_label: ester->NMe-amide
+    strategy: reaction_smarts
+    site_types: [ester_region]
+    reaction_smarts: "[C:1](=O)O[#6]>>[C:1](=O)NC"
+    product_smiles: "[*:1]C(=O)NC"
+    class: [amide, ester_bioisostere, hydrolysis_block]
+    direction_tags: [reduce_hydrolysis, improve_metabolic_stability, increase_polarity, add_hbd, add_hba]
+    property_tags: {polarity: high, lipophilicity_effect: decrease, metabolic_stability: increase}
+    risk: {risk_tags: [permeability_risk], default_enabled: true, cautions: [adds_hbond_donor]}
+    priority: {mvp: true, common_medchem: true, default_rank: 18}
+
+  - rule_id: FGR0003
+    name: Ester to N,N-dimethyl amide
+    replacement_label: ester->NMe2-amide
+    strategy: reaction_smarts
+    site_types: [ester_region]
+    reaction_smarts: "[C:1](=O)O[#6]>>[C:1](=O)N(C)C"
+    product_smiles: "[*:1]C(=O)N(C)C"
+    class: [amide, ester_bioisostere, hydrolysis_block]
+    direction_tags: [reduce_hydrolysis, improve_metabolic_stability, increase_polarity, add_hba]
+    property_tags: {polarity: high, lipophilicity_effect: neutral_or_decrease, metabolic_stability: increase}
+    risk: {risk_tags: [], default_enabled: true, cautions: [tertiary_amide_geometry_context_dependent]}
+    priority: {mvp: true, common_medchem: true, default_rank: 28}
+
+  - rule_id: FGR0004
+    name: Ester to hydroxamic acid
+    replacement_label: ester->hydroxamic_acid
+    strategy: reaction_smarts
+    site_types: [ester_region]
+    reaction_smarts: "[C:1](=O)O[#6]>>[C:1](=O)NO"
+    product_smiles: "[*:1]C(=O)NO"
+    class: [hydroxamate, acid_bioisostere, chelator]
+    direction_tags: [increase_polarity, add_hbd, add_hba, metal_binding_scan]
+    property_tags: {polarity: high, lipophilicity_effect: decrease}
+    risk: {risk_tags: [permeability_risk, chelation_risk], default_enabled: true, cautions: [metal_binding_may_dominate_sar]}
+    priority: {mvp: true, common_medchem: false, default_rank: 72}
+
+  - rule_id: FGR0005
+    name: Carboxylic acid to tetrazole
+    replacement_label: acid->tetrazole
+    strategy: reaction_smarts
+    site_types: [acid_region]
+    reaction_smarts: "[C:1](=O)[O;H1,-]>>[c:1]1nnn[nH]1"
+    product_smiles: "[*:1]c1nnn[nH]1"
+    class: [tetrazole, acid_bioisostere, heteroaryl]
+    direction_tags: [acid_bioisostere_scan, improve_metabolic_stability, increase_polarity, add_hba]
+    property_tags: {polarity: high, lipophilicity_effect: context_dependent, acidity: carboxylate_like}
+    risk: {risk_tags: [ionizable_group, permeability_risk], default_enabled: true, cautions: [tautomer_and_pka_context_dependent]}
+    priority: {mvp: true, common_medchem: true, default_rank: 14}
+
+  - rule_id: FGR0006
+    name: Carboxylic acid to acylsulfonamide
+    replacement_label: acid->acylsulfonamide
+    strategy: reaction_smarts
+    site_types: [acid_region]
+    reaction_smarts: "[C:1](=O)[O;H1,-]>>[C:1](=O)NS(=O)(=O)C"
+    product_smiles: "[*:1]C(=O)NS(=O)(=O)C"
+    class: [acylsulfonamide, acid_bioisostere, sulfonamide]
+    direction_tags: [acid_bioisostere_scan, increase_polarity, add_hbd, add_hba]
+    property_tags: {polarity: high, lipophilicity_effect: decrease, acidity: carboxylate_like}
+    risk: {risk_tags: [permeability_risk], default_enabled: true, cautions: [high_tpsa_possible]}
+    priority: {mvp: true, common_medchem: true, default_rank: 26}
+
+  - rule_id: FGR0007
+    name: Carboxylic acid to hydroxamic acid
+    replacement_label: acid->hydroxamic_acid
+    strategy: reaction_smarts
+    site_types: [acid_region]
+    reaction_smarts: "[C:1](=O)[O;H1,-]>>[C:1](=O)NO"
+    product_smiles: "[*:1]C(=O)NO"
+    class: [hydroxamate, acid_bioisostere, chelator]
+    direction_tags: [acid_bioisostere_scan, increase_polarity, add_hbd, add_hba, metal_binding_scan]
+    property_tags: {polarity: high, lipophilicity_effect: decrease}
+    risk: {risk_tags: [permeability_risk, chelation_risk], default_enabled: true, cautions: [metal_binding_may_dominate_sar]}
+    priority: {mvp: true, common_medchem: false, default_rank: 74}
+
+  - rule_id: FGR0008
+    name: Aromatic C-H to ring nitrogen
+    replacement_label: phenyl->pyridyl
+    strategy: aromatic_ch_to_n
+    site_types: [aromatic_CH]
+    product_smiles: "aryl_N_scan"
+    class: [heteroaryl, pyridyl, phenyl_bioisostere]
+    direction_tags: [heteroaryl_scan, increase_polarity, reduce_lipophilicity, add_hba]
+    property_tags: {polarity: medium, lipophilicity_effect: decrease, electronics: electron_withdrawing}
+    risk: {risk_tags: [], default_enabled: true, cautions: [pyridine_basicity_context_dependent]}
+    priority: {mvp: true, common_medchem: true, default_rank: 16}
+
+  - rule_id: FGR0009
+    name: Aryl methoxy to phenol
+    replacement_label: OMe->OH
+    strategy: reaction_smarts
+    site_types: [methoxy_position]
+    reaction_smarts: "[c:1]OC>>[c:1]O"
+    product_smiles: "[*:1]O"
+    class: [phenol, demethylation_probe, hbond_donor, hbond_acceptor]
+    direction_tags: [metabolism_blocking, reduce_lipophilicity, increase_polarity, add_hbd, add_hba]
+    property_tags: {polarity: high, lipophilicity_effect: decrease, metabolic_stability: context_dependent}
+    risk: {risk_tags: [permeability_risk], default_enabled: true, cautions: [phenol_glucuronidation_context_dependent]}
+    priority: {mvp: true, common_medchem: true, default_rank: 22}
+
+  - rule_id: FGR0010
+    name: Aryl methoxy to trifluoromethoxy
+    replacement_label: OMe->OCF3
+    strategy: reaction_smarts
+    site_types: [methoxy_position]
+    reaction_smarts: "[c:1]OC>>[c:1]OC(F)(F)F"
+    product_smiles: "[*:1]OC(F)(F)F"
+    class: [fluorinated, alkoxy, metabolism_block]
+    direction_tags: [metabolism_blocking, electronics_scan, increase_size]
+    property_tags: {polarity: low, lipophilicity_effect: increase, metabolic_stability: increase}
+    risk: {risk_tags: [possible_lipophilicity_increase], default_enabled: true, cautions: [can_increase_logp]}
+    priority: {mvp: true, common_medchem: true, default_rank: 30}
+
+  - rule_id: FGR0011
+    name: Aryl methoxy to difluoromethoxy
+    replacement_label: OMe->OCHF2
+    strategy: reaction_smarts
+    site_types: [methoxy_position]
+    reaction_smarts: "[c:1]OC>>[c:1]OC(F)F"
+    product_smiles: "[*:1]OC(F)F"
+    class: [fluorinated, alkoxy, metabolism_block]
+    direction_tags: [metabolism_blocking, electronics_scan, increase_polarity]
+    property_tags: {polarity: medium, lipophilicity_effect: neutral_or_increase, metabolic_stability: increase}
+    risk: {risk_tags: [], default_enabled: true, cautions: [context_dependent_hbond_effect]}
+    priority: {mvp: true, common_medchem: true, default_rank: 34}
+
+  - rule_id: FGR0012
+    name: Aryl methoxy to fluoro
+    replacement_label: OMe->F
+    strategy: reaction_smarts
+    site_types: [methoxy_position]
+    reaction_smarts: "[c:1]OC>>[c:1]F"
+    product_smiles: "[*:1]F"
+    class: [halogen, metabolism_block, small_group]
+    direction_tags: [metabolism_blocking, decrease_size, electronics_scan]
+    property_tags: {polarity: low, lipophilicity_effect: neutral, metabolic_stability: increase}
+    risk: {risk_tags: [], default_enabled: true, cautions: [removes_hbond_acceptor]}
+    priority: {mvp: true, common_medchem: true, default_rank: 38}
+
+  - rule_id: FGR0013
+    name: Basic amine to N-oxide
+    replacement_label: amine->N-oxide
+    strategy: basic_amine_n_oxide
+    site_types: [basic_amine]
+    product_smiles: "basic_amine_N_oxide"
+    class: [amine_oxide, polarity_probe, basicity_reduction]
+    direction_tags: [improve_solubility, reduce_basicity, increase_polarity, add_hba]
+    property_tags: {polarity: high, lipophilicity_effect: decrease, basicity: reduced}
+    risk: {risk_tags: [advanced_only, permeability_risk], default_enabled: true, cautions: [n_oxide_is_often_context_specific]}
+    priority: {mvp: true, common_medchem: false, default_rank: 70}
+
+  - rule_id: FGR0014
+    name: Basic amine N-dealkylation
+    replacement_label: amine->dealkylated
+    strategy: basic_amine_dealkylation
+    site_types: [basic_amine]
+    product_smiles: "basic_amine_dealkylated"
+    class: [amine, basicity_reduction, metabolism_soft_spot_probe]
+    direction_tags: [reduce_basicity, improve_solubility, metabolism_blocking, increase_polarity]
+    property_tags: {polarity: medium, lipophilicity_effect: decrease, basicity: context_dependent}
+    risk: {risk_tags: [], default_enabled: true, cautions: [may_reduce_potency_if_amine_binding_is_key]}
+    priority: {mvp: true, common_medchem: true, default_rank: 36}
+
+  - rule_id: FGR0015
+    name: Basic amine to acetamide
+    replacement_label: amine->acetamide
+    strategy: basic_amine_acetylation
+    site_types: [basic_amine]
+    product_smiles: "[*:1]C(=O)C"
+    class: [amide, basicity_reduction, polarity_probe]
+    direction_tags: [reduce_basicity, increase_polarity, add_hba, amide_bioisostere_scan]
+    property_tags: {polarity: high, lipophilicity_effect: decrease, basicity: strongly_reduced}
+    risk: {risk_tags: [permeability_risk], default_enabled: true, cautions: [requires_available_secondary_or_primary_amine]}
+    priority: {mvp: true, common_medchem: true, default_rank: 42}
+
+  - rule_id: FGR0016
+    name: Basic amine to methanesulfonamide
+    replacement_label: amine->mesylamide
+    strategy: basic_amine_mesylation
+    site_types: [basic_amine]
+    product_smiles: "[*:1]S(=O)(=O)C"
+    class: [sulfonamide, basicity_reduction, polarity_probe]
+    direction_tags: [reduce_basicity, increase_polarity, add_hba, amide_bioisostere_scan]
+    property_tags: {polarity: high, lipophilicity_effect: decrease, basicity: strongly_reduced}
+    risk: {risk_tags: [permeability_risk], default_enabled: true, cautions: [high_tpsa_possible]}
+    priority: {mvp: true, common_medchem: true, default_rank: 48}
+
+  - rule_id: FGR0017
+    name: Ester to 1,3,4-oxadiazole-like heteroaryl
+    replacement_label: ester->oxadiazole_like
+    strategy: carbonyl_region_to_fragment
+    site_types: [ester_region]
+    product_smiles: "[*:1]c1nnco1"
+    class: [oxadiazole, ester_bioisostere, heteroaryl, hydrolysis_block]
+    direction_tags: [reduce_hydrolysis, improve_metabolic_stability, amide_bioisostere_scan, heteroaryl_scan]
+    property_tags: {polarity: medium, lipophilicity_effect: context_dependent, metabolic_stability: increase}
+    risk: {risk_tags: [], default_enabled: true, cautions: [regiochemistry_and_vector_need_manual_review]}
+    priority: {mvp: true, common_medchem: true, default_rank: 32}
+
+  - rule_id: FGR0018
+    name: Amide to 1,3,4-oxadiazole-like heteroaryl
+    replacement_label: amide->oxadiazole_like
+    strategy: carbonyl_region_to_fragment
+    site_types: [amide_region]
+    product_smiles: "[*:1]c1nnco1"
+    class: [oxadiazole, amide_bioisostere, heteroaryl, hydrolysis_block]
+    direction_tags: [amide_bioisostere_scan, reduce_hydrolysis, improve_metabolic_stability, heteroaryl_scan]
+    property_tags: {polarity: medium, lipophilicity_effect: context_dependent, metabolic_stability: increase}
+    risk: {risk_tags: [], default_enabled: true, cautions: [amide_hbond_vector_removed_manual_review_required]}
+    priority: {mvp: true, common_medchem: true, default_rank: 30}

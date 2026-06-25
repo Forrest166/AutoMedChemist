@@ -1,0 +1,2042 @@
+source_name: ChEMBL rdMMPA
+version: mmp-0.1
+description: Single-cut matched molecular pair transform evidence mined from ChEMBL
+  molecule records.
+metadata:
+  raw: D:\AutoMedChemist\data\raw\chembl_molecule_records.json
+  source_molecule_count: 800
+  min_pair_count: 2
+  max_transforms: 500
+transforms:
+- transform_id: MMP-AFF39870C1F7
+  variable_from_smiles: Cl[*:1]
+  variable_to_smiles: O=[N+]([O-])[*:1]
+  pair_count: 4
+  core_count: 4
+  example_count: 8
+  example_molecule_ids:
+  - CHEMBL12
+  - CHEMBL13209
+  - CHEMBL13280
+  - CHEMBL13291
+  - CHEMBL13341
+  - CHEMBL268254
+  - CHEMBL452
+  - CHEMBL523
+  from_example_molecule_ids:
+  - CHEMBL12
+  - CHEMBL13291
+  - CHEMBL268254
+  - CHEMBL523
+  to_example_molecule_ids:
+  - CHEMBL13209
+  - CHEMBL13280
+  - CHEMBL13341
+  - CHEMBL452
+  mean_delta_fragment_mw: 10.552
+  mean_delta_clogp: -0.9621
+  mean_delta_tpsa: 43.14
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-73B73974410E
+  variable_from_smiles: Clc1ccccc1[*:1]
+  variable_to_smiles: c1ccc([*:1])cc1
+  pair_count: 4
+  core_count: 4
+  example_count: 8
+  example_molecule_ids:
+  - CHEMBL13209
+  - CHEMBL268254
+  - CHEMBL452
+  - CHEMBL523
+  - CHEMBL568
+  - CHEMBL580
+  - CHEMBL646
+  - CHEMBL661
+  from_example_molecule_ids:
+  - CHEMBL268254
+  - CHEMBL452
+  - CHEMBL580
+  - CHEMBL646
+  to_example_molecule_ids:
+  - CHEMBL13209
+  - CHEMBL523
+  - CHEMBL568
+  - CHEMBL661
+  mean_delta_fragment_mw: -34.445
+  mean_delta_clogp: -0.6534
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-291095386F57
+  variable_from_smiles: NS(=O)(=O)c1ccc([*:1])cc1
+  variable_to_smiles: O=C(O)CC[*:1]
+  pair_count: 3
+  core_count: 3
+  example_count: 6
+  example_molecule_ids:
+  - CHEMBL14227
+  - CHEMBL414
+  - CHEMBL419
+  - CHEMBL574
+  - CHEMBL576
+  - CHEMBL96
+  from_example_molecule_ids:
+  - CHEMBL414
+  - CHEMBL419
+  - CHEMBL574
+  to_example_molecule_ids:
+  - CHEMBL14227
+  - CHEMBL576
+  - CHEMBL96
+  mean_delta_fragment_mw: -83.115
+  mean_delta_clogp: 0.9201
+  mean_delta_tpsa: -22.86
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-F7B0D6FD690D
+  variable_from_smiles: CCC[*:1]
+  variable_to_smiles: C[*:1]
+  pair_count: 3
+  core_count: 3
+  example_count: 6
+  example_molecule_ids:
+  - CHEMBL14227
+  - CHEMBL26505
+  - CHEMBL282567
+  - CHEMBL447
+  - CHEMBL539
+  - CHEMBL7863
+  from_example_molecule_ids:
+  - CHEMBL14227
+  - CHEMBL282567
+  - CHEMBL447
+  to_example_molecule_ids:
+  - CHEMBL26505
+  - CHEMBL539
+  - CHEMBL7863
+  mean_delta_fragment_mw: -28.054
+  mean_delta_clogp: -0.7802
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-FD48F0D719E9
+  variable_from_smiles: COc1ccc([*:1])cc1
+  variable_to_smiles: c1ccc([*:1])cc1
+  pair_count: 3
+  core_count: 3
+  example_count: 6
+  example_molecule_ids:
+  - CHEMBL14060
+  - CHEMBL428479
+  - CHEMBL469
+  - CHEMBL544
+  - CHEMBL711
+  - CHEMBL712
+  from_example_molecule_ids:
+  - CHEMBL428479
+  - CHEMBL544
+  - CHEMBL712
+  to_example_molecule_ids:
+  - CHEMBL14060
+  - CHEMBL469
+  - CHEMBL711
+  mean_delta_fragment_mw: -30.026
+  mean_delta_clogp: -0.0086
+  mean_delta_tpsa: -9.23
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-7D5793B12415
+  variable_from_smiles: Oc1ccc([*:1])cc1
+  variable_to_smiles: c1ccc([*:1])cc1
+  pair_count: 3
+  core_count: 3
+  example_count: 6
+  example_molecule_ids:
+  - CHEMBL112
+  - CHEMBL14060
+  - CHEMBL269644
+  - CHEMBL489
+  - CHEMBL537
+  - CHEMBL83
+  from_example_molecule_ids:
+  - CHEMBL112
+  - CHEMBL489
+  - CHEMBL537
+  to_example_molecule_ids:
+  - CHEMBL14060
+  - CHEMBL269644
+  - CHEMBL83
+  mean_delta_fragment_mw: -15.999
+  mean_delta_clogp: 0.2944
+  mean_delta_tpsa: -20.23
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-F09305E94285
+  variable_from_smiles: CC(=O)N[*:1]
+  variable_to_smiles: CC/C(=C(/c1ccc(OCCN(C)C)cc1)[*:1])c1ccccc1
+  pair_count: 3
+  core_count: 3
+  example_count: 6
+  example_molecule_ids:
+  - CHEMBL112
+  - CHEMBL269644
+  - CHEMBL487
+  - CHEMBL489
+  - CHEMBL83
+  - CHEMBL9419
+  from_example_molecule_ids:
+  - CHEMBL112
+  - CHEMBL269644
+  - CHEMBL9419
+  to_example_molecule_ids:
+  - CHEMBL487
+  - CHEMBL489
+  - CHEMBL83
+  mean_delta_fragment_mw: 236.358
+  mean_delta_clogp: 4.8678
+  mean_delta_tpsa: -16.63
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-2FC79E6B1F59
+  variable_from_smiles: C[*:1]
+  variable_to_smiles: OC[*:1]
+  pair_count: 3
+  core_count: 3
+  example_count: 6
+  example_molecule_ids:
+  - CHEMBL11298
+  - CHEMBL22077
+  - CHEMBL279014
+  - CHEMBL279597
+  - CHEMBL720
+  - CHEMBL9113
+  from_example_molecule_ids:
+  - CHEMBL279014
+  - CHEMBL279597
+  - CHEMBL9113
+  to_example_molecule_ids:
+  - CHEMBL11298
+  - CHEMBL22077
+  - CHEMBL720
+  mean_delta_fragment_mw: 15.999
+  mean_delta_clogp: -1.0983
+  mean_delta_tpsa: 20.23
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-2ABA6EDAFE16
+  variable_from_smiles: CN(C)[*:1]
+  variable_to_smiles: CN[*:1]
+  pair_count: 3
+  core_count: 3
+  example_count: 6
+  example_molecule_ids:
+  - CHEMBL11
+  - CHEMBL267936
+  - CHEMBL445
+  - CHEMBL538393
+  - CHEMBL629
+  - CHEMBL72
+  from_example_molecule_ids:
+  - CHEMBL11
+  - CHEMBL538393
+  - CHEMBL629
+  to_example_molecule_ids:
+  - CHEMBL267936
+  - CHEMBL445
+  - CHEMBL72
+  mean_delta_fragment_mw: -14.027
+  mean_delta_clogp: -0.3422
+  mean_delta_tpsa: 8.79
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-9039D77853FB
+  variable_from_smiles: CO[*:1]
+  variable_to_smiles: O[*:1]
+  pair_count: 3
+  core_count: 3
+  example_count: 6
+  example_molecule_ids:
+  - CHEMBL20803
+  - CHEMBL22207
+  - CHEMBL485
+  - CHEMBL537
+  - CHEMBL544
+  - CHEMBL70
+  from_example_molecule_ids:
+  - CHEMBL22207
+  - CHEMBL485
+  - CHEMBL544
+  to_example_molecule_ids:
+  - CHEMBL20803
+  - CHEMBL537
+  - CHEMBL70
+  mean_delta_fragment_mw: -14.027
+  mean_delta_clogp: -0.6541
+  mean_delta_tpsa: 11.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-3DD62B15BE25
+  variable_from_smiles: C[*:1]
+  variable_to_smiles: O=C(O)[*:1]
+  pair_count: 3
+  core_count: 3
+  example_count: 6
+  example_molecule_ids:
+  - CHEMBL14053
+  - CHEMBL14227
+  - CHEMBL16080
+  - CHEMBL414
+  - CHEMBL574
+  - CHEMBL576
+  from_example_molecule_ids:
+  - CHEMBL14227
+  - CHEMBL16080
+  - CHEMBL574
+  to_example_molecule_ids:
+  - CHEMBL14053
+  - CHEMBL414
+  - CHEMBL576
+  mean_delta_fragment_mw: 29.982
+  mean_delta_clogp: -0.3701
+  mean_delta_tpsa: 37.3
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-A2AF2157D044
+  variable_from_smiles: CCOC(=O)[*:1]
+  variable_to_smiles: O=C(O)[*:1]
+  pair_count: 3
+  core_count: 3
+  example_count: 6
+  example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL565
+  - CHEMBL577
+  - CHEMBL578
+  - CHEMBL579
+  - CHEMBL683
+  from_example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL565
+  - CHEMBL578
+  to_example_molecule_ids:
+  - CHEMBL577
+  - CHEMBL579
+  - CHEMBL683
+  mean_delta_fragment_mw: -28.054
+  mean_delta_clogp: -0.4785
+  mean_delta_tpsa: 11.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-3D1498B0EF64
+  variable_from_smiles: CC[*:1]
+  variable_to_smiles: C[*:1]
+  pair_count: 3
+  core_count: 3
+  example_count: 5
+  example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL14227
+  - CHEMBL448
+  - CHEMBL449
+  - CHEMBL539
+  from_example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL14227
+  - CHEMBL448
+  to_example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL449
+  - CHEMBL539
+  mean_delta_fragment_mw: -14.027
+  mean_delta_clogp: -0.3901
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-8A9B4553CE98
+  variable_from_smiles: C=CCC1(C(C)[*:1])C(=O)NC(=O)NC1=O
+  variable_to_smiles: CCN(CC)CCOC(=O)C(c1ccccc1)(c1ccccc1)[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL26505
+  - CHEMBL282567
+  - CHEMBL447
+  - CHEMBL7863
+  from_example_molecule_ids:
+  - CHEMBL447
+  - CHEMBL7863
+  to_example_molecule_ids:
+  - CHEMBL26505
+  - CHEMBL282567
+  mean_delta_fragment_mw: 115.219
+  mean_delta_clogp: 3.0919
+  mean_delta_tpsa: -45.73
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-1D2E3F862F28
+  variable_from_smiles: C=CCC1(C(C)[*:1])C(=O)NC(=O)NC1=O
+  variable_to_smiles: O=C(O)[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL14227
+  - CHEMBL447
+  - CHEMBL539
+  - CHEMBL7863
+  from_example_molecule_ids:
+  - CHEMBL447
+  - CHEMBL7863
+  to_example_molecule_ids:
+  - CHEMBL14227
+  - CHEMBL539
+  mean_delta_fragment_mw: -150.181
+  mean_delta_clogp: -0.0589
+  mean_delta_tpsa: -37.97
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-6FCEBD14FAB6
+  variable_from_smiles: CCC1(C(C)C[*:1])C(=O)NC(=O)NC1=O
+  variable_to_smiles: O=C(O)C[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL14227
+  - CHEMBL448
+  - CHEMBL449
+  from_example_molecule_ids:
+  - CHEMBL448
+  - CHEMBL449
+  to_example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL14227
+  mean_delta_fragment_mw: -138.17
+  mean_delta_clogp: -0.3139
+  mean_delta_tpsa: -37.97
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-5163CF3EBED4
+  variable_from_smiles: CCC1(C(C)C[*:1])C(=O)NC(=O)NC1=O
+  variable_to_smiles: O=C(O)[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL448
+  - CHEMBL449
+  - CHEMBL539
+  from_example_molecule_ids:
+  - CHEMBL448
+  - CHEMBL449
+  to_example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL539
+  mean_delta_fragment_mw: -152.197
+  mean_delta_clogp: -0.1388
+  mean_delta_tpsa: -37.97
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-A0F52A2D4583
+  variable_from_smiles: CCCC(C)C1(C[*:1])C(=O)NC(=O)NC1=O
+  variable_to_smiles: CCCC(C)C1(C[*:1])C(=O)NC(=S)NC1=O
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL440
+  - CHEMBL441
+  - CHEMBL447
+  - CHEMBL448
+  from_example_molecule_ids:
+  - CHEMBL447
+  - CHEMBL448
+  to_example_molecule_ids:
+  - CHEMBL440
+  - CHEMBL441
+  mean_delta_fragment_mw: 16.068
+  mean_delta_clogp: 0.1649
+  mean_delta_tpsa: -17.07
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-FD477037503F
+  variable_from_smiles: CCN(CC)CCNc1ccc([*:1])c2sc3ccccc3c(=O)c12
+  variable_to_smiles: N[C@H](C(=O)O)[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL11298
+  - CHEMBL22077
+  - CHEMBL279014
+  - CHEMBL279597
+  from_example_molecule_ids:
+  - CHEMBL22077
+  - CHEMBL279014
+  to_example_molecule_ids:
+  - CHEMBL11298
+  - CHEMBL279597
+  mean_delta_fragment_mw: -251.398
+  mean_delta_clogp: -4.4379
+  mean_delta_tpsa: 30.98
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-C0212E278225
+  variable_from_smiles: CCN(CC)CCNc1ccc([*:1])c2sc3ccccc3c(=O)c12
+  variable_to_smiles: c1ccc([*:1])cc1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL22077
+  - CHEMBL279014
+  - CHEMBL720
+  - CHEMBL9113
+  from_example_molecule_ids:
+  - CHEMBL22077
+  - CHEMBL279014
+  to_example_molecule_ids:
+  - CHEMBL720
+  - CHEMBL9113
+  mean_delta_fragment_mw: -248.351
+  mean_delta_clogp: -2.4818
+  mean_delta_tpsa: -32.34
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-FFCFB141D0C3
+  variable_from_smiles: CCN(CC)CCOC(=O)C(c1ccccc1)(c1ccccc1)[*:1]
+  variable_to_smiles: O=C(O)[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL14227
+  - CHEMBL26505
+  - CHEMBL282567
+  - CHEMBL539
+  from_example_molecule_ids:
+  - CHEMBL26505
+  - CHEMBL282567
+  to_example_molecule_ids:
+  - CHEMBL14227
+  - CHEMBL539
+  mean_delta_fragment_mw: -265.4
+  mean_delta_clogp: -3.1508
+  mean_delta_tpsa: 7.76
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-93F771B283FE
+  variable_from_smiles: ClC(Cl)(Cl)[*:1]
+  variable_to_smiles: NS(=O)(=O)c1ccc([*:1])cc1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL14053
+  - CHEMBL16080
+  - CHEMBL414
+  - CHEMBL574
+  from_example_molecule_ids:
+  - CHEMBL14053
+  - CHEMBL16080
+  to_example_molecule_ids:
+  - CHEMBL414
+  - CHEMBL574
+  mean_delta_fragment_mw: 37.816
+  mean_delta_clogp: -2.3548
+  mean_delta_tpsa: 60.16
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-B06975F392A2
+  variable_from_smiles: ClC(Cl)(Cl)[*:1]
+  variable_to_smiles: O=C(O)CC[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL14053
+  - CHEMBL14227
+  - CHEMBL16080
+  - CHEMBL576
+  from_example_molecule_ids:
+  - CHEMBL14053
+  - CHEMBL16080
+  to_example_molecule_ids:
+  - CHEMBL14227
+  - CHEMBL576
+  mean_delta_fragment_mw: -45.299
+  mean_delta_clogp: -1.4347
+  mean_delta_tpsa: 37.3
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-002316C8F55E
+  variable_from_smiles: N[C@H](C(=O)O)[*:1]
+  variable_to_smiles: O=C(O)C[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL274323
+  - CHEMBL279597
+  - CHEMBL576
+  from_example_molecule_ids:
+  - CHEMBL274323
+  - CHEMBL279597
+  to_example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL576
+  mean_delta_fragment_mw: -15.015
+  mean_delta_clogp: 1.1335
+  mean_delta_tpsa: -26.02
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-57776305F5F9
+  variable_from_smiles: N[C@H](C(=O)O)[*:1]
+  variable_to_smiles: c1ccc([*:1])cc1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL11298
+  - CHEMBL279597
+  - CHEMBL720
+  - CHEMBL9113
+  from_example_molecule_ids:
+  - CHEMBL11298
+  - CHEMBL279597
+  to_example_molecule_ids:
+  - CHEMBL720
+  - CHEMBL9113
+  mean_delta_fragment_mw: 3.047
+  mean_delta_clogp: 1.9561
+  mean_delta_tpsa: -63.32
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-AAB28CAC430D
+  variable_from_smiles: O=C(Nc1ccc(O)cc1)[*:1]
+  variable_to_smiles: O=C(O)[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL112
+  - CHEMBL38
+  - CHEMBL539
+  - CHEMBL7301
+  from_example_molecule_ids:
+  - CHEMBL112
+  - CHEMBL7301
+  to_example_molecule_ids:
+  - CHEMBL38
+  - CHEMBL539
+  mean_delta_fragment_mw: -91.113
+  mean_delta_clogp: -1.2597
+  mean_delta_tpsa: -12.03
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-B33B1436DFD7
+  variable_from_smiles: O=C(O)C[*:1]
+  variable_to_smiles: OC[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL11298
+  - CHEMBL14021
+  - CHEMBL274323
+  - CHEMBL545
+  from_example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL274323
+  to_example_molecule_ids:
+  - CHEMBL11298
+  - CHEMBL545
+  mean_delta_fragment_mw: -28.01
+  mean_delta_clogp: -0.5531
+  mean_delta_tpsa: -17.07
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-68CBA01034FF
+  variable_from_smiles: CN1CCC23CCCCC2C1Cc1ccc([*:1])cc13
+  variable_to_smiles: CN1CC[C@]23c4c5ccc([*:1])c4O[C@H]2[C@@H](O)C=C[C@H]3[C@H]1C5
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL20803
+  - CHEMBL22207
+  - CHEMBL485
+  - CHEMBL70
+  from_example_molecule_ids:
+  - CHEMBL20803
+  - CHEMBL22207
+  to_example_molecule_ids:
+  - CHEMBL485
+  - CHEMBL70
+  mean_delta_fragment_mw: 27.966
+  mean_delta_clogp: -1.8823
+  mean_delta_tpsa: 29.46
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-BA01E96FAB62
+  variable_from_smiles: CN1CCC23CCCCC2C1Cc1ccc([*:1])cc13
+  variable_to_smiles: Oc1ccc([*:1])cc1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL20803
+  - CHEMBL22207
+  - CHEMBL537
+  - CHEMBL544
+  from_example_molecule_ids:
+  - CHEMBL20803
+  - CHEMBL22207
+  to_example_molecule_ids:
+  - CHEMBL537
+  - CHEMBL544
+  mean_delta_fragment_mw: -147.265
+  mean_delta_clogp: -1.9826
+  mean_delta_tpsa: 16.99
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-E1FAC5FA215B
+  variable_from_smiles: CN1CC[C@]23c4c5ccc([*:1])c4O[C@H]2[C@@H](O)C=C[C@H]3[C@H]1C5
+  variable_to_smiles: Oc1ccc([*:1])cc1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL485
+  - CHEMBL537
+  - CHEMBL544
+  - CHEMBL70
+  from_example_molecule_ids:
+  - CHEMBL485
+  - CHEMBL70
+  to_example_molecule_ids:
+  - CHEMBL537
+  - CHEMBL544
+  mean_delta_fragment_mw: -175.231
+  mean_delta_clogp: -0.1003
+  mean_delta_tpsa: -12.47
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-F02307435C4D
+  variable_from_smiles: O=C(O)c1cc([*:1])ccc1O
+  variable_to_smiles: O=S(=O)(Nc1ccccn1)c1ccc([*:1])cc1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL421
+  - CHEMBL425
+  - CHEMBL700
+  - CHEMBL704
+  from_example_molecule_ids:
+  - CHEMBL425
+  - CHEMBL704
+  to_example_molecule_ids:
+  - CHEMBL421
+  - CHEMBL700
+  mean_delta_fragment_mw: 96.158
+  mean_delta_clogp: 0.792
+  mean_delta_tpsa: 1.53
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-23671D87B221
+  variable_from_smiles: CC(C)(Oc1ccc(Cl)cc1)[*:1]
+  variable_to_smiles: C[C@H](N[C@@H](CCc1ccccc1)[*:1])C(=O)N1CC2(C[C@H]1C(=O)O)SCCS2
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL565
+  - CHEMBL579
+  - CHEMBL683
+  from_example_molecule_ids:
+  - CHEMBL565
+  - CHEMBL683
+  to_example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL579
+  mean_delta_fragment_mw: 223.923
+  mean_delta_clogp: -0.6697
+  mean_delta_tpsa: 60.41
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-FEDAA713C11A
+  variable_from_smiles: CC(C)(Oc1ccc(Cl)cc1)[*:1]
+  variable_to_smiles: C[C@H](N[C@@H](CCc1ccccc1)[*:1])C(=O)N1CCC[C@H]1C(=O)O
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL565
+  - CHEMBL577
+  - CHEMBL578
+  - CHEMBL683
+  from_example_molecule_ids:
+  - CHEMBL565
+  - CHEMBL683
+  to_example_molecule_ids:
+  - CHEMBL577
+  - CHEMBL578
+  mean_delta_fragment_mw: 133.751
+  mean_delta_clogp: -1.4559
+  mean_delta_tpsa: 60.41
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-7BF0ABB7E22B
+  variable_from_smiles: CC1=C(/C=C/C(C)=C/C=C/C(C)=C/[*:1])C(C)(C)CCC1
+  variable_to_smiles: C[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL112
+  - CHEMBL38
+  - CHEMBL539
+  - CHEMBL7301
+  from_example_molecule_ids:
+  - CHEMBL38
+  - CHEMBL7301
+  to_example_molecule_ids:
+  - CHEMBL112
+  - CHEMBL539
+  mean_delta_fragment_mw: -240.39
+  mean_delta_clogp: -5.441
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-3CF0CA94DC55
+  variable_from_smiles: CCC[*:1]
+  variable_to_smiles: CC[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL14227
+  - CHEMBL448
+  - CHEMBL449
+  from_example_molecule_ids:
+  - CHEMBL14227
+  - CHEMBL448
+  to_example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL449
+  mean_delta_fragment_mw: -14.027
+  mean_delta_clogp: -0.3901
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-17F6A7B0618A
+  variable_from_smiles: CC[*:1]
+  variable_to_smiles: N[C@@H](C[*:1])C(=O)O
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL11298
+  - CHEMBL14021
+  - CHEMBL274323
+  - CHEMBL545
+  from_example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL545
+  to_example_molecule_ids:
+  - CHEMBL11298
+  - CHEMBL274323
+  mean_delta_fragment_mw: 59.024
+  mean_delta_clogp: -1.608
+  mean_delta_tpsa: 63.32
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-A228FCD7C5B2
+  variable_from_smiles: C[C@H](N[C@@H](CCc1ccccc1)[*:1])C(=O)N1CC2(C[C@H]1C(=O)O)SCCS2
+  variable_to_smiles: C[C@H](N[C@@H](CCc1ccccc1)[*:1])C(=O)N1CCC[C@H]1C(=O)O
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL577
+  - CHEMBL578
+  - CHEMBL579
+  from_example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL579
+  to_example_molecule_ids:
+  - CHEMBL577
+  - CHEMBL578
+  mean_delta_fragment_mw: -90.172
+  mean_delta_clogp: -0.7862
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-B8D5A060BE64
+  variable_from_smiles: CCC1(C(C)[*:1])C(=O)NC(=O)NC1=O
+  variable_to_smiles: O=C(O)[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL14227
+  - CHEMBL448
+  - CHEMBL449
+  from_example_molecule_ids:
+  - CHEMBL448
+  - CHEMBL449
+  to_example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL14227
+  mean_delta_fragment_mw: -138.17
+  mean_delta_clogp: 0.1072
+  mean_delta_tpsa: -37.97
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-AC7378AA808E
+  variable_from_smiles: CCC1([*:1])C(=O)NC(=O)NC1=O
+  variable_to_smiles: O[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL14060
+  - CHEMBL40
+  - CHEMBL444
+  - CHEMBL545
+  from_example_molecule_ids:
+  - CHEMBL40
+  - CHEMBL444
+  to_example_molecule_ids:
+  - CHEMBL14060
+  - CHEMBL545
+  mean_delta_fragment_mw: -138.126
+  mean_delta_clogp: -0.0274
+  mean_delta_tpsa: -55.04
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-3EBB2FA131D0
+  variable_from_smiles: CCCC(C)C1([*:1])C(=O)NC(=O)NC1=O
+  variable_to_smiles: CCCC(C)C1([*:1])C(=O)NC(=S)NC1=O
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL440
+  - CHEMBL441
+  - CHEMBL447
+  - CHEMBL448
+  from_example_molecule_ids:
+  - CHEMBL447
+  - CHEMBL448
+  to_example_molecule_ids:
+  - CHEMBL440
+  - CHEMBL441
+  mean_delta_fragment_mw: 16.068
+  mean_delta_clogp: 0.1649
+  mean_delta_tpsa: -17.07
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-A82D3C216A3F
+  variable_from_smiles: CCO[*:1]
+  variable_to_smiles: O[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL112
+  - CHEMBL16073
+  - CHEMBL16264
+  - CHEMBL545
+  from_example_molecule_ids:
+  - CHEMBL16073
+  - CHEMBL16264
+  to_example_molecule_ids:
+  - CHEMBL112
+  - CHEMBL545
+  mean_delta_fragment_mw: -28.054
+  mean_delta_clogp: -1.0442
+  mean_delta_tpsa: 11.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-6AAD780DF6EC
+  variable_from_smiles: O=C(O)[*:1]
+  variable_to_smiles: O[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL11298
+  - CHEMBL14021
+  - CHEMBL274323
+  - CHEMBL545
+  from_example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL274323
+  to_example_molecule_ids:
+  - CHEMBL11298
+  - CHEMBL545
+  mean_delta_fragment_mw: -28.01
+  mean_delta_clogp: -0.7707
+  mean_delta_tpsa: -17.07
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-BF5DA191BBDB
+  variable_from_smiles: CC(=O)Nc1ccc([*:1])cc1
+  variable_to_smiles: CC[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL112
+  - CHEMBL16073
+  - CHEMBL16264
+  - CHEMBL545
+  from_example_molecule_ids:
+  - CHEMBL112
+  - CHEMBL16073
+  to_example_molecule_ids:
+  - CHEMBL16264
+  - CHEMBL545
+  mean_delta_fragment_mw: -105.096
+  mean_delta_clogp: 0.1543
+  mean_delta_tpsa: -29.1
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-CFDADD0AA6BD
+  variable_from_smiles: CC[*:1]
+  variable_to_smiles: c1ccc([*:1])cc1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL14060
+  - CHEMBL40
+  - CHEMBL444
+  - CHEMBL545
+  from_example_molecule_ids:
+  - CHEMBL444
+  - CHEMBL545
+  to_example_molecule_ids:
+  - CHEMBL14060
+  - CHEMBL40
+  mean_delta_fragment_mw: 48.044
+  mean_delta_clogp: -0.1127
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-3E5E16385F71
+  variable_from_smiles: C[*:1]
+  variable_to_smiles: N[C@H](C(=O)O)[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL11298
+  - CHEMBL14021
+  - CHEMBL274323
+  - CHEMBL545
+  from_example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL545
+  to_example_molecule_ids:
+  - CHEMBL11298
+  - CHEMBL274323
+  mean_delta_fragment_mw: 59.024
+  mean_delta_clogp: -1.6787
+  mean_delta_tpsa: 63.32
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-743386EA0A7C
+  variable_from_smiles: C[*:1]
+  variable_to_smiles: O=C(O)C[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL274323
+  - CHEMBL279597
+  - CHEMBL576
+  from_example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL279597
+  to_example_molecule_ids:
+  - CHEMBL274323
+  - CHEMBL576
+  mean_delta_fragment_mw: 44.009
+  mean_delta_clogp: -0.5452
+  mean_delta_tpsa: 37.3
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-081031ACD300
+  variable_from_smiles: CN1CCN(C(c2ccccc2)[*:1])CC1
+  variable_to_smiles: O=C1c2ccccc2C(=O)C1[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL22150
+  - CHEMBL278519
+  - CHEMBL648
+  - CHEMBL711
+  from_example_molecule_ids:
+  - CHEMBL22150
+  - CHEMBL648
+  to_example_molecule_ids:
+  - CHEMBL278519
+  - CHEMBL711
+  mean_delta_fragment_mw: -44.145
+  mean_delta_clogp: -0.0785
+  mean_delta_tpsa: 27.66
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-6D312F995E72
+  variable_from_smiles: CN1C(=O)CN=C(c2ccccc2)c2cc([*:1])ccc21
+  variable_to_smiles: CN1C(=O)CN=C(c2ccccc2F)c2cc([*:1])ccc21
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL12
+  - CHEMBL13280
+  - CHEMBL13291
+  - CHEMBL13341
+  from_example_molecule_ids:
+  - CHEMBL12
+  - CHEMBL13341
+  to_example_molecule_ids:
+  - CHEMBL13280
+  - CHEMBL13291
+  mean_delta_fragment_mw: 17.99
+  mean_delta_clogp: 0.1391
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-B00AE1C93522
+  variable_from_smiles: CN1C(=O)CN=C(c2ccccc2)c2cc([*:1])ccc21
+  variable_to_smiles: O=C1CN=C(c2ccccc2)c2cc([*:1])ccc2N1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL12
+  - CHEMBL13209
+  - CHEMBL13341
+  - CHEMBL523
+  from_example_molecule_ids:
+  - CHEMBL12
+  - CHEMBL13341
+  to_example_molecule_ids:
+  - CHEMBL13209
+  - CHEMBL523
+  mean_delta_fragment_mw: -14.027
+  mean_delta_clogp: -0.0243
+  mean_delta_tpsa: 8.79
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-B81A5CCEAC47
+  variable_from_smiles: CN1C(=O)CN=C(c2ccccc2)c2cc([*:1])ccc21
+  variable_to_smiles: O=C1CN=C(c2ccccc2Cl)c2cc([*:1])ccc2N1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL12
+  - CHEMBL13341
+  - CHEMBL268254
+  - CHEMBL452
+  from_example_molecule_ids:
+  - CHEMBL12
+  - CHEMBL13341
+  to_example_molecule_ids:
+  - CHEMBL268254
+  - CHEMBL452
+  mean_delta_fragment_mw: 20.418
+  mean_delta_clogp: 0.6291
+  mean_delta_tpsa: 8.79
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-563FCF9A6A0A
+  variable_from_smiles: CN1C(=O)CN=C(c2ccccc2F)c2cc([*:1])ccc21
+  variable_to_smiles: O=C1CN=C(c2ccccc2)c2cc([*:1])ccc2N1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL13209
+  - CHEMBL13280
+  - CHEMBL13291
+  - CHEMBL523
+  from_example_molecule_ids:
+  - CHEMBL13280
+  - CHEMBL13291
+  to_example_molecule_ids:
+  - CHEMBL13209
+  - CHEMBL523
+  mean_delta_fragment_mw: -32.017
+  mean_delta_clogp: -0.1634
+  mean_delta_tpsa: 8.79
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-22473A626FBA
+  variable_from_smiles: CN1C(=O)CN=C(c2ccccc2F)c2cc([*:1])ccc21
+  variable_to_smiles: O=C1CN=C(c2ccccc2Cl)c2cc([*:1])ccc2N1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL13280
+  - CHEMBL13291
+  - CHEMBL268254
+  - CHEMBL452
+  from_example_molecule_ids:
+  - CHEMBL13280
+  - CHEMBL13291
+  to_example_molecule_ids:
+  - CHEMBL268254
+  - CHEMBL452
+  mean_delta_fragment_mw: 2.428
+  mean_delta_clogp: 0.49
+  mean_delta_tpsa: 8.79
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-98AB60E2A4A1
+  variable_from_smiles: O=C1CN=C(c2ccccc2)c2cc([*:1])ccc2N1
+  variable_to_smiles: O=C1CN=C(c2ccccc2Cl)c2cc([*:1])ccc2N1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL13209
+  - CHEMBL268254
+  - CHEMBL452
+  - CHEMBL523
+  from_example_molecule_ids:
+  - CHEMBL13209
+  - CHEMBL523
+  to_example_molecule_ids:
+  - CHEMBL268254
+  - CHEMBL452
+  mean_delta_fragment_mw: 34.445
+  mean_delta_clogp: 0.6534
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-FCA7BAF50E68
+  variable_from_smiles: C1CCN(C2([*:1])CCCCC2)CC1
+  variable_to_smiles: COC(=O)Nc1nc2cc(C(=O)[*:1])ccc2[nH]1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL275528
+  - CHEMBL279676
+  - CHEMBL685
+  - CHEMBL9514
+  from_example_molecule_ids:
+  - CHEMBL275528
+  - CHEMBL279676
+  to_example_molecule_ids:
+  - CHEMBL685
+  - CHEMBL9514
+  mean_delta_fragment_mw: 51.904
+  mean_delta_clogp: -1.2513
+  mean_delta_tpsa: 80.84
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-9B4B6B96DCF9
+  variable_from_smiles: CC(=O)N[*:1]
+  variable_to_smiles: O[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL112
+  - CHEMBL14060
+  - CHEMBL269644
+  - CHEMBL537
+  from_example_molecule_ids:
+  - CHEMBL112
+  - CHEMBL269644
+  to_example_molecule_ids:
+  - CHEMBL14060
+  - CHEMBL537
+  mean_delta_fragment_mw: -41.053
+  mean_delta_clogp: -0.1438
+  mean_delta_tpsa: -8.87
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-2F5B715181BB
+  variable_from_smiles: CC/C(=C(/c1ccc(OCCN(C)C)cc1)[*:1])c1ccccc1
+  variable_to_smiles: O[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL14060
+  - CHEMBL489
+  - CHEMBL537
+  - CHEMBL83
+  from_example_molecule_ids:
+  - CHEMBL489
+  - CHEMBL83
+  to_example_molecule_ids:
+  - CHEMBL14060
+  - CHEMBL537
+  mean_delta_fragment_mw: -277.411
+  mean_delta_clogp: -5.0116
+  mean_delta_tpsa: 7.76
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-425755921607
+  variable_from_smiles: CN1C(=O)CN=C([*:1])c2cc(Cl)ccc21
+  variable_to_smiles: CN1C(=O)CN=C([*:1])c2cc([N+](=O)[O-])ccc21
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL12
+  - CHEMBL13280
+  - CHEMBL13291
+  - CHEMBL13341
+  from_example_molecule_ids:
+  - CHEMBL12
+  - CHEMBL13291
+  to_example_molecule_ids:
+  - CHEMBL13280
+  - CHEMBL13341
+  mean_delta_fragment_mw: 10.552
+  mean_delta_clogp: -0.7452
+  mean_delta_tpsa: 43.14
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-6E8AE1ED022F
+  variable_from_smiles: Cc1nnc2n1-c1ccc(Cl)cc1C([*:1])=NC2
+  variable_to_smiles: O=C1CN=C([*:1])c2cc(Cl)ccc2N1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL268254
+  - CHEMBL523
+  - CHEMBL646
+  - CHEMBL661
+  from_example_molecule_ids:
+  - CHEMBL646
+  - CHEMBL661
+  to_example_molecule_ids:
+  - CHEMBL268254
+  - CHEMBL523
+  mean_delta_fragment_mw: -38.053
+  mean_delta_clogp: -0.4506
+  mean_delta_tpsa: -1.61
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-3E062A606FF9
+  variable_from_smiles: Cc1nnc2n1-c1ccc(Cl)cc1C([*:1])=NC2
+  variable_to_smiles: O=C1CN=C([*:1])c2cc([N+](=O)[O-])ccc2N1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL13209
+  - CHEMBL452
+  - CHEMBL646
+  - CHEMBL661
+  from_example_molecule_ids:
+  - CHEMBL646
+  - CHEMBL661
+  to_example_molecule_ids:
+  - CHEMBL13209
+  - CHEMBL452
+  mean_delta_fragment_mw: -27.501
+  mean_delta_clogp: -1.1958
+  mean_delta_tpsa: 41.53
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-8AAC2F2C2F3F
+  variable_from_smiles: Cc1nnc2n1-c1ccc(Cl)cc1C([*:1])=NC2
+  variable_to_smiles: O=C1Nc2ccc(Cl)cc2C([*:1])=NC1O
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL568
+  - CHEMBL580
+  - CHEMBL646
+  - CHEMBL661
+  from_example_molecule_ids:
+  - CHEMBL646
+  - CHEMBL661
+  to_example_molecule_ids:
+  - CHEMBL568
+  - CHEMBL580
+  mean_delta_fragment_mw: -22.054
+  mean_delta_clogp: -1.1322
+  mean_delta_tpsa: 18.62
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-D7AD7053CD48
+  variable_from_smiles: O=C(O)C1CCn2c(C(=O)[*:1])ccc21
+  variable_to_smiles: O=C1c2ccccc2C(=O)C1[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL428479
+  - CHEMBL469
+  - CHEMBL711
+  - CHEMBL712
+  from_example_molecule_ids:
+  - CHEMBL428479
+  - CHEMBL469
+  to_example_molecule_ids:
+  - CHEMBL711
+  - CHEMBL712
+  mean_delta_fragment_mw: -33.03
+  mean_delta_clogp: 0.6539
+  mean_delta_tpsa: -25.16
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-183AC7A865DB
+  variable_from_smiles: O=C(O)C1CCn2c(C(=O)[*:1])ccc21
+  variable_to_smiles: O[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL14060
+  - CHEMBL428479
+  - CHEMBL469
+  - CHEMBL544
+  from_example_molecule_ids:
+  - CHEMBL428479
+  - CHEMBL469
+  to_example_molecule_ids:
+  - CHEMBL14060
+  - CHEMBL544
+  mean_delta_fragment_mw: -161.16
+  mean_delta_clogp: -1.3065
+  mean_delta_tpsa: -39.07
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-D352C4305A1D
+  variable_from_smiles: O=C1CN=C([*:1])c2cc(Cl)ccc2N1
+  variable_to_smiles: O=C1CN=C([*:1])c2cc([N+](=O)[O-])ccc2N1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL13209
+  - CHEMBL268254
+  - CHEMBL452
+  - CHEMBL523
+  from_example_molecule_ids:
+  - CHEMBL268254
+  - CHEMBL523
+  to_example_molecule_ids:
+  - CHEMBL13209
+  - CHEMBL452
+  mean_delta_fragment_mw: 10.552
+  mean_delta_clogp: -0.7452
+  mean_delta_tpsa: 43.14
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-9E7A0ED48550
+  variable_from_smiles: O=C1CN=C([*:1])c2cc(Cl)ccc2N1
+  variable_to_smiles: O=C1Nc2ccc(Cl)cc2C([*:1])=NC1O
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL268254
+  - CHEMBL523
+  - CHEMBL568
+  - CHEMBL580
+  from_example_molecule_ids:
+  - CHEMBL268254
+  - CHEMBL523
+  to_example_molecule_ids:
+  - CHEMBL568
+  - CHEMBL580
+  mean_delta_fragment_mw: 15.999
+  mean_delta_clogp: -0.6816
+  mean_delta_tpsa: 20.23
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-83BE675C860C
+  variable_from_smiles: O=C1CN=C([*:1])c2cc([N+](=O)[O-])ccc2N1
+  variable_to_smiles: O=C1Nc2ccc(Cl)cc2C([*:1])=NC1O
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL13209
+  - CHEMBL452
+  - CHEMBL568
+  - CHEMBL580
+  from_example_molecule_ids:
+  - CHEMBL13209
+  - CHEMBL452
+  to_example_molecule_ids:
+  - CHEMBL568
+  - CHEMBL580
+  mean_delta_fragment_mw: 5.447
+  mean_delta_clogp: 0.0636
+  mean_delta_tpsa: -22.91
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-46ACF4145F18
+  variable_from_smiles: O=C1c2ccccc2C(=O)C1[*:1]
+  variable_to_smiles: O[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL14060
+  - CHEMBL544
+  - CHEMBL711
+  - CHEMBL712
+  from_example_molecule_ids:
+  - CHEMBL711
+  - CHEMBL712
+  to_example_molecule_ids:
+  - CHEMBL14060
+  - CHEMBL544
+  mean_delta_fragment_mw: -128.13
+  mean_delta_clogp: -1.9604
+  mean_delta_tpsa: -13.91
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-94031F4A5613
+  variable_from_smiles: C(CC[*:1])=C1c2ccccc2CCc2ccccc21
+  variable_to_smiles: CC1(C)C2CCC(C2)C1(C)[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL267936
+  - CHEMBL445
+  - CHEMBL538393
+  - CHEMBL629
+  from_example_molecule_ids:
+  - CHEMBL445
+  - CHEMBL629
+  to_example_molecule_ids:
+  - CHEMBL267936
+  - CHEMBL538393
+  mean_delta_fragment_mw: -96.088
+  mean_delta_clogp: -1.4042
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-42D5DD076769
+  variable_from_smiles: C(CC[*:1])=C1c2ccccc2CCc2ccccc21
+  variable_to_smiles: c1ccc2c(c1)CCc1ccccc1N2CCC[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL11
+  - CHEMBL445
+  - CHEMBL629
+  - CHEMBL72
+  from_example_molecule_ids:
+  - CHEMBL445
+  - CHEMBL629
+  to_example_molecule_ids:
+  - CHEMBL11
+  - CHEMBL72
+  mean_delta_fragment_mw: 3.004
+  mean_delta_clogp: -0.2936
+  mean_delta_tpsa: 3.24
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-7F0EB968B509
+  variable_from_smiles: CC1(C)C2CCC(C2)C1(C)[*:1]
+  variable_to_smiles: c1ccc2c(c1)CCc1ccccc1N2CCC[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL11
+  - CHEMBL267936
+  - CHEMBL538393
+  - CHEMBL72
+  from_example_molecule_ids:
+  - CHEMBL267936
+  - CHEMBL538393
+  to_example_molecule_ids:
+  - CHEMBL11
+  - CHEMBL72
+  mean_delta_fragment_mw: 99.092
+  mean_delta_clogp: 1.1106
+  mean_delta_tpsa: 3.24
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-6980D455643E
+  variable_from_smiles: C(C[*:1])=C1c2ccccc2CCc2ccccc21
+  variable_to_smiles: c1ccc2c(c1)CCc1ccccc1N2CC[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL11
+  - CHEMBL445
+  - CHEMBL629
+  - CHEMBL72
+  from_example_molecule_ids:
+  - CHEMBL445
+  - CHEMBL629
+  to_example_molecule_ids:
+  - CHEMBL11
+  - CHEMBL72
+  mean_delta_fragment_mw: 3.004
+  mean_delta_clogp: -0.2936
+  mean_delta_tpsa: 3.24
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-D65BC6E2A786
+  variable_from_smiles: CN(C)C[*:1]
+  variable_to_smiles: CNC[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL11
+  - CHEMBL445
+  - CHEMBL629
+  - CHEMBL72
+  from_example_molecule_ids:
+  - CHEMBL11
+  - CHEMBL629
+  to_example_molecule_ids:
+  - CHEMBL445
+  - CHEMBL72
+  mean_delta_fragment_mw: -14.027
+  mean_delta_clogp: -0.3422
+  mean_delta_tpsa: 8.79
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-228D05F88961
+  variable_from_smiles: C(=C1c2ccccc2CCc2ccccc21)[*:1]
+  variable_to_smiles: c1ccc2c(c1)CCc1ccccc1N2C[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL11
+  - CHEMBL445
+  - CHEMBL629
+  - CHEMBL72
+  from_example_molecule_ids:
+  - CHEMBL445
+  - CHEMBL629
+  to_example_molecule_ids:
+  - CHEMBL11
+  - CHEMBL72
+  mean_delta_fragment_mw: 3.004
+  mean_delta_clogp: -0.2936
+  mean_delta_tpsa: 3.24
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-3340A63069CE
+  variable_from_smiles: CN(C)CC[*:1]
+  variable_to_smiles: CNCC[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL11
+  - CHEMBL445
+  - CHEMBL629
+  - CHEMBL72
+  from_example_molecule_ids:
+  - CHEMBL11
+  - CHEMBL629
+  to_example_molecule_ids:
+  - CHEMBL445
+  - CHEMBL72
+  mean_delta_fragment_mw: -14.027
+  mean_delta_clogp: -0.3422
+  mean_delta_tpsa: 8.79
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-3BFF996CF2F8
+  variable_from_smiles: Fc1ccccc1[*:1]
+  variable_to_smiles: c1ccc([*:1])cc1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL12
+  - CHEMBL13280
+  - CHEMBL13291
+  - CHEMBL13341
+  from_example_molecule_ids:
+  - CHEMBL13280
+  - CHEMBL13291
+  to_example_molecule_ids:
+  - CHEMBL12
+  - CHEMBL13341
+  mean_delta_fragment_mw: -17.99
+  mean_delta_clogp: -0.1391
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-1CEB33EF0BE6
+  variable_from_smiles: C[*:1]
+  variable_to_smiles: NC[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL14227
+  - CHEMBL419
+  - CHEMBL574
+  - CHEMBL96
+  from_example_molecule_ids:
+  - CHEMBL14227
+  - CHEMBL574
+  to_example_molecule_ids:
+  - CHEMBL419
+  - CHEMBL96
+  mean_delta_fragment_mw: 15.015
+  mean_delta_clogp: -1.1319
+  mean_delta_tpsa: 26.02
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-D922819936D2
+  variable_from_smiles: NC[*:1]
+  variable_to_smiles: O=C(O)[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL414
+  - CHEMBL419
+  - CHEMBL576
+  - CHEMBL96
+  from_example_molecule_ids:
+  - CHEMBL419
+  - CHEMBL96
+  to_example_molecule_ids:
+  - CHEMBL414
+  - CHEMBL576
+  mean_delta_fragment_mw: 14.967
+  mean_delta_clogp: 0.7618
+  mean_delta_tpsa: 11.28
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-A184D6978D11
+  variable_from_smiles: Oc1ccc([*:1])cc1
+  variable_to_smiles: Oc1cccc([*:1])c1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL112
+  - CHEMBL487
+  - CHEMBL489
+  - CHEMBL9419
+  from_example_molecule_ids:
+  - CHEMBL112
+  - CHEMBL489
+  to_example_molecule_ids:
+  - CHEMBL487
+  - CHEMBL9419
+  mean_delta_fragment_mw: 0.0
+  mean_delta_clogp: 0.0
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-B88A16435F63
+  variable_from_smiles: Oc1cccc([*:1])c1
+  variable_to_smiles: c1ccc([*:1])cc1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL269644
+  - CHEMBL487
+  - CHEMBL83
+  - CHEMBL9419
+  from_example_molecule_ids:
+  - CHEMBL487
+  - CHEMBL9419
+  to_example_molecule_ids:
+  - CHEMBL269644
+  - CHEMBL83
+  mean_delta_fragment_mw: -15.999
+  mean_delta_clogp: 0.2944
+  mean_delta_tpsa: -20.23
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-95CC0413A178
+  variable_from_smiles: N[*:1]
+  variable_to_smiles: O=C(O)c1cc(/N=N/[*:1])ccc1O
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL421
+  - CHEMBL425
+  - CHEMBL700
+  - CHEMBL704
+  from_example_molecule_ids:
+  - CHEMBL700
+  - CHEMBL704
+  to_example_molecule_ids:
+  - CHEMBL421
+  - CHEMBL425
+  mean_delta_fragment_mw: 149.105
+  mean_delta_clogp: 2.229
+  mean_delta_tpsa: 56.23
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-42CFBB4A599F
+  variable_from_smiles: CN1C(C(=O)N[*:1])=C(O)c2ccccc2S1(=O)=O
+  variable_to_smiles: Nc1ccc(S(=O)(=O)N[*:1])cc1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL20634
+  - CHEMBL437
+  - CHEMBL527
+  - CHEMBL700
+  from_example_molecule_ids:
+  - CHEMBL20634
+  - CHEMBL527
+  to_example_molecule_ids:
+  - CHEMBL437
+  - CHEMBL700
+  mean_delta_fragment_mw: -82.058
+  mean_delta_clogp: -0.1164
+  mean_delta_tpsa: -14.52
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-D749526AA885
+  variable_from_smiles: C[C@H](N[*:1])C(=O)N1CC2(C[C@H]1C(=O)O)SCCS2
+  variable_to_smiles: C[C@H](N[*:1])C(=O)N1CCC[C@H]1C(=O)O
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL577
+  - CHEMBL578
+  - CHEMBL579
+  from_example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL579
+  to_example_molecule_ids:
+  - CHEMBL577
+  - CHEMBL578
+  mean_delta_fragment_mw: -90.172
+  mean_delta_clogp: -0.7862
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-1CA8B0E0D1F8
+  variable_from_smiles: CCOC(=O)[C@H](CCc1ccccc1)[*:1]
+  variable_to_smiles: O=C(O)[C@H](CCc1ccccc1)[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL577
+  - CHEMBL578
+  - CHEMBL579
+  from_example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL578
+  to_example_molecule_ids:
+  - CHEMBL577
+  - CHEMBL579
+  mean_delta_fragment_mw: -28.054
+  mean_delta_clogp: -0.4785
+  mean_delta_tpsa: 11.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-64C88D6809FB
+  variable_from_smiles: C[C@@H](C(=O)N1CC2(C[C@H]1C(=O)O)SCCS2)[*:1]
+  variable_to_smiles: C[C@@H](C(=O)N1CCC[C@H]1C(=O)O)[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL577
+  - CHEMBL578
+  - CHEMBL579
+  from_example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL579
+  to_example_molecule_ids:
+  - CHEMBL577
+  - CHEMBL578
+  mean_delta_fragment_mw: -90.172
+  mean_delta_clogp: -0.7862
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-49EE33779629
+  variable_from_smiles: CCOC(=O)[C@H](CCc1ccccc1)N[*:1]
+  variable_to_smiles: O=C(O)[C@H](CCc1ccccc1)N[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL577
+  - CHEMBL578
+  - CHEMBL579
+  from_example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL578
+  to_example_molecule_ids:
+  - CHEMBL577
+  - CHEMBL579
+  mean_delta_fragment_mw: -28.054
+  mean_delta_clogp: -0.4785
+  mean_delta_tpsa: 11.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-2DCA35EC230E
+  variable_from_smiles: O=C(O)[C@@H]1CC2(CN1C(=O)[*:1])SCCS2
+  variable_to_smiles: O=C(O)[C@@H]1CCCN1C(=O)[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL577
+  - CHEMBL578
+  - CHEMBL579
+  from_example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL579
+  to_example_molecule_ids:
+  - CHEMBL577
+  - CHEMBL578
+  mean_delta_fragment_mw: -90.172
+  mean_delta_clogp: -0.7862
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-DA5D76BB7272
+  variable_from_smiles: CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)[*:1]
+  variable_to_smiles: C[C@H](N[C@@H](CCc1ccccc1)C(=O)O)[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL577
+  - CHEMBL578
+  - CHEMBL579
+  from_example_molecule_ids:
+  - CHEMBL431
+  - CHEMBL578
+  to_example_molecule_ids:
+  - CHEMBL577
+  - CHEMBL579
+  mean_delta_fragment_mw: -28.054
+  mean_delta_clogp: -0.4785
+  mean_delta_tpsa: 11.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-915FE812E202
+  variable_from_smiles: c1ccc([*:1])nc1
+  variable_to_smiles: c1csc([*:1])n1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL20634
+  - CHEMBL437
+  - CHEMBL527
+  - CHEMBL700
+  from_example_molecule_ids:
+  - CHEMBL527
+  - CHEMBL700
+  to_example_molecule_ids:
+  - CHEMBL20634
+  - CHEMBL437
+  mean_delta_fragment_mw: 6.029
+  mean_delta_clogp: 0.0615
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-FF2BC9153A14
+  variable_from_smiles: C=C[*:1]
+  variable_to_smiles: C[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL440
+  - CHEMBL441
+  - CHEMBL447
+  - CHEMBL448
+  from_example_molecule_ids:
+  - CHEMBL440
+  - CHEMBL447
+  to_example_molecule_ids:
+  - CHEMBL441
+  - CHEMBL448
+  mean_delta_fragment_mw: -12.011
+  mean_delta_clogp: -0.0954
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-36A0B70C3300
+  variable_from_smiles: C=CC[*:1]
+  variable_to_smiles: CC[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL440
+  - CHEMBL441
+  - CHEMBL447
+  - CHEMBL448
+  from_example_molecule_ids:
+  - CHEMBL440
+  - CHEMBL447
+  to_example_molecule_ids:
+  - CHEMBL441
+  - CHEMBL448
+  mean_delta_fragment_mw: -12.011
+  mean_delta_clogp: -0.1661
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-4662C82D73CA
+  variable_from_smiles: Brc1ccc([*:1])cc1
+  variable_to_smiles: FC(F)(F)c1cccc([*:1])c1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL15023
+  - CHEMBL24944
+  - CHEMBL28218
+  - CHEMBL283552
+  from_example_molecule_ids:
+  - CHEMBL24944
+  - CHEMBL28218
+  to_example_molecule_ids:
+  - CHEMBL15023
+  - CHEMBL283552
+  mean_delta_fragment_mw: -10.899
+  mean_delta_clogp: 0.2563
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-2F01752B5D53
+  variable_from_smiles: c1ccc([*:1])cc1
+  variable_to_smiles: c1csc([*:1])c1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL275528
+  - CHEMBL279676
+  - CHEMBL685
+  - CHEMBL9514
+  from_example_molecule_ids:
+  - CHEMBL275528
+  - CHEMBL685
+  to_example_molecule_ids:
+  - CHEMBL279676
+  - CHEMBL9514
+  mean_delta_fragment_mw: 6.029
+  mean_delta_clogp: 0.0615
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-4950F455E9D6
+  variable_from_smiles: O=C(CCCN1CCC(O)([*:1])CC1)c1ccc(F)cc1
+  variable_to_smiles: O=C(N[*:1])c1cc(Br)cc(Br)c1O
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL15023
+  - CHEMBL24944
+  - CHEMBL28218
+  - CHEMBL283552
+  from_example_molecule_ids:
+  - CHEMBL15023
+  - CHEMBL28218
+  to_example_molecule_ids:
+  - CHEMBL24944
+  - CHEMBL283552
+  mean_delta_fragment_mw: 29.602
+  mean_delta_clogp: -0.011
+  mean_delta_tpsa: 8.79
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-98982D5C2A60
+  variable_from_smiles: Clc1ccc([*:1])cc1
+  variable_to_smiles: c1ccc([*:1])cc1
+  pair_count: 2
+  core_count: 2
+  example_count: 4
+  example_molecule_ids:
+  - CHEMBL22150
+  - CHEMBL278519
+  - CHEMBL648
+  - CHEMBL711
+  from_example_molecule_ids:
+  - CHEMBL22150
+  - CHEMBL278519
+  to_example_molecule_ids:
+  - CHEMBL648
+  - CHEMBL711
+  mean_delta_fragment_mw: -34.445
+  mean_delta_clogp: -0.6534
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA
+- transform_id: MMP-6B6DB8B3EAB5
+  variable_from_smiles: O=C(O)C[*:1]
+  variable_to_smiles: O=C(O)[*:1]
+  pair_count: 2
+  core_count: 2
+  example_count: 3
+  example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL14227
+  - CHEMBL539
+  from_example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL14227
+  to_example_molecule_ids:
+  - CHEMBL14021
+  - CHEMBL539
+  mean_delta_fragment_mw: -14.027
+  mean_delta_clogp: 0.1751
+  mean_delta_tpsa: 0.0
+  source_name: ChEMBL rdMMPA

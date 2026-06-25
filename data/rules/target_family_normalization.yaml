@@ -1,0 +1,57 @@
+version: target-family-normalization-0.1
+description: Normalize noisy target family labels into broad evidence buckets for scoring context.
+families:
+  - family_id: kinase
+    label: Kinase
+    weight: 1.15
+    match:
+      any_contains: [kinase, jak, pi3k, mtor, raf, mek, erk, btk, abl, egfr, alk, cdk, mapk]
+  - family_id: gpcr
+    label: GPCR / receptor
+    weight: 1.05
+    match:
+      any_contains: [g protein-coupled, gpcr, receptor, adrenoceptor, dopamine, serotonin, histamine, muscarinic]
+  - family_id: nuclear_receptor
+    label: Nuclear receptor
+    weight: 1.05
+    match:
+      any_contains: [nuclear receptor, estrogen receptor, androgen receptor, glucocorticoid receptor, ppar, retinoic]
+  - family_id: ion_channel
+    label: Ion channel
+    weight: 1.1
+    match:
+      any_contains: [ion channel, sodium channel, calcium channel, potassium channel, herg, cav, nav, kv]
+  - family_id: transporter
+    label: Transporter
+    weight: 1.0
+    match:
+      any_contains: [transporter, uptake, efflux, slc, abc, p-glycoprotein, pgp]
+  - family_id: protease
+    label: Protease
+    weight: 1.05
+    match:
+      any_contains: [protease, caspase, cathepsin, thrombin, factor xa, renin, metalloprotease]
+  - family_id: cytochrome_p450
+    label: Cytochrome P450
+    weight: 1.2
+    match:
+      any_contains: [cytochrome p450, cyp, cyp3a4, cyp2d6, cyp2c9, cyp2c19]
+  - family_id: phosphatase
+    label: Phosphatase
+    weight: 1.0
+    match:
+      any_contains: [phosphatase, ptp]
+  - family_id: epigenetic
+    label: Epigenetic regulator
+    weight: 1.05
+    match:
+      any_contains: [hdac, bromodomain, bet, methyltransferase, demethylase, histone]
+  - family_id: enzyme_other
+    label: Other enzyme
+    weight: 1.0
+    match:
+      any_contains: [enzyme, oxidase, reductase, synthase, dehydrogenase, transferase]
+default:
+  family_id: other
+  label: Other / target-specific
+  weight: 1.0

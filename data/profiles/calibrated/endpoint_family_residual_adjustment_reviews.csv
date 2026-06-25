@@ -1,0 +1,4 @@
+adjustment_id,review_decision,reviewer,reviewed_at,evidence_source,endpoint_group,target_family,recommended_weight_action,suggested_score_shift,adjustment_confidence,holdout_check_status,observed_count,max_abs_residual,review_note
+RPA-F4A2E0518B,approved,codex,2026-05-16T23:23:28.436680+00:00,scaffold_local,permeability,kinase,downweight_source_for_endpoint_family,-9.8,medium,limited_holdout_ready,12,0.49,auto-approved medium/high confidence residual adjustment
+RPA-5D2246CA6B,approved,codex,2026-05-16T23:23:28.436680+00:00,public_mmp,antibacterial_potency,kinase,monitor_endpoint_family_residual,1.8,medium,limited_holdout_ready,48,0.09,auto-approved medium/high confidence residual adjustment
+RPA-564ED14293,approved,codex,2026-05-16T23:23:28.436680+00:00,public_mmp,metabolic_stability,kinase,monitor_endpoint_family_residual,1.8,medium,limited_holdout_ready,96,0.09,auto-approved medium/high confidence residual adjustment
