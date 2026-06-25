@@ -231,22 +231,6 @@ Best for internal users and reviewers. Include:
 
 The current `AutoMedChemist.exe` should not be treated as a fully standalone product installer. The UI is packaged, but computational actions still depend on an external Python runtime and installed project dependencies. For a more robust public release, bundle a managed Python runtime or modify the build so pipeline actions no longer depend on system `python`.
 
-## Validation Before Release
-
-Run these checks before handing the project to another machine:
-
-```powershell
-.\.venv\Scripts\python.exe run_native_ui.py --smoke
-.\.venv\Scripts\python.exe scripts\detect_sites.py --smiles "COc1ccc(Cl)cc1"
-.\.venv\Scripts\python.exe scripts\run_mvp.py --smiles "COc1ccc(Cl)cc1" --direction increase_polarity --max-candidates 10
-.\.venv\Scripts\python.exe scripts\build_release_smoke_checklist.py --production
-```
-
-For development:
-
-```powershell
-.\.venv\Scripts\python.exe -m pytest
-```
 
 ## Troubleshooting
 
