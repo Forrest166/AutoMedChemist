@@ -1,0 +1,9 @@
+rdkit
+pandas
+pyyaml
+requests
+streamlit
+pytest
+pyinstaller
+python-pptx
+reportlab
