@@ -313,3 +313,31 @@ AutoMedChemist/
 ## Project Boundary
 
 AutoMedChemist is for local medicinal-chemistry idea generation, triage, and review. Supplier availability, route classes, quote fields, experiment plans, and feedback-import gates are treated as local planning or defensive governance context only. The application does not automate procurement, supplier purchase, real experiment execution, or unreviewed real feedback import.
+
+
+
+## App Screenshots
+
+### 2D Visual Gallery
+
+![2D Visual Gallery](app_screenshots/07_generated_2d_visual_gallery.png)
+
+---
+
+### Quick User Overview
+
+![Quick User Overview](app_screenshots/12_quick_user_overview.png)
+
+---
+
+### Before & After 2D Clean Panel
+
+![Before & After](app_screenshots/13_before_after_2d_clean_panel.png)
+
+---
+
+### Candidate Table with 2D Outputs
+
+![Candidate Table](app_screenshots/14_candidate_table_with_2d_outputs.png)
+
+
